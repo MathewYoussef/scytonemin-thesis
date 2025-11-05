@@ -1,0 +1,29 @@
+{
+  "form": "total",
+  "weighting": "1/x",
+  "intercept_mode": "free",
+  "slope": 7.210567878414983e-06,
+  "intercept": -0.015988813752569535,
+  "slope_se": 2.631832520177949e-07,
+  "intercept_se": 0.005092074964304804,
+  "r_squared": 0.9933829522916803,
+  "r_squared_weighted": 0.9933829522916803,
+  "rss": 0.006203662006215239,
+  "aic": -45.19967964929813,
+  "bic": -45.30785935118751,
+  "degrees_of_freedom": 5,
+  "intercept_pvalue_normal": 0.0016898199981245643,
+  "max_abs_rel_residual": 0.12743137603615104,
+  "residual_poly_r2": 0.6029855217878275,
+  "qc_pass": true,
+  "cov_intercept_slope": -9.103761524251316e-10,
+  "blank_stats": {
+    "n_blank": 0,
+    "mean_blank_area": NaN,
+    "std_blank_area": NaN
+  },
+  "detection_limits": {
+    "LOD_mg_ml": NaN,
+    "LOQ_mg_ml": NaN
+  }
+}

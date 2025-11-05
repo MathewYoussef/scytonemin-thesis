@@ -1,0 +1,7 @@
+metric,mean_negatives,prob_zero_negatives,prob_one_negative,prob_two_or_more
+chrom_total,1.802,0.006,0.343,0.651
+chrom_oxidized,1.862,0.001,0.329,0.67
+chrom_reduced,1.88,0.011,0.215,0.774
+dad_total,1.727,0.01,0.393,0.597
+dad_oxidized,1.625,0.004,0.471,0.525
+dad_reduced,1.921,0.018,0.192,0.79

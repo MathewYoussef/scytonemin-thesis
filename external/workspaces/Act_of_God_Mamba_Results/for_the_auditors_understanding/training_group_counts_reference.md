@@ -1,0 +1,55 @@
+# Training Group Counts
+
+| group_id | spectra | replicate span |
+| --- | --- | --- |
+| treatment_1/sample_A/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_1/sample_A/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_1/sample_B/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_1/sample_B/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_1/sample_C/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_1/sample_C/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_1/sample_E/12Oclock | 300 | rep_000 … rep_149 |
+| treatment_1/sample_E/6Oclock | 300 | rep_000 … rep_149 |
+| treatment_1/sample_H/12Oclock | 300 | rep_000 … rep_149 |
+| treatment_1/sample_H/6Oclock | 300 | rep_000 … rep_149 |
+| treatment_2/sample_A/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_2/sample_A/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_2/sample_C/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_2/sample_C/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_2/sample_D/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_2/sample_D/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_2/sample_F/12Oclock | 300 | rep_000 … rep_149 |
+| treatment_2/sample_F/6Oclock | 300 | rep_000 … rep_149 |
+| treatment_2/sample_H/12Oclock | 300 | rep_000 … rep_149 |
+| treatment_2/sample_H/6Oclock | 300 | rep_000 … rep_149 |
+| treatment_3/sample_B/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_3/sample_B/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_3/sample_F/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_3/sample_F/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_3/sample_G/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_3/sample_G/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_3/sample_I/12Oclock | 300 | rep_000 … rep_149 |
+| treatment_3/sample_I/6Oclock | 300 | rep_000 … rep_149 |
+| treatment_3/sample_J/6Oclock | 300 | rep_000 … rep_149 |
+| treatment_4/sample_C/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_4/sample_C/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_4/sample_D/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_4/sample_D/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_4/sample_E/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_4/sample_E/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_4/sample_I/12Oclock | 300 | rep_000 … rep_149 |
+| treatment_4/sample_I/6Oclock | 300 | rep_000 … rep_149 |
+| treatment_4/sample_J/12Oclock | 300 | rep_000 … rep_149 |
+| treatment_4/sample_J/6Oclock | 300 | rep_000 … rep_149 |
+| treatment_5/sample_A/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_5/sample_A/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_5/sample_C/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_5/sample_C/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_5/sample_G/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_5/sample_G/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_5/sample_H/12Oclock | 300 | rep_000 … rep_149 |
+| treatment_5/sample_J/12Oclock | 300 | rep_000 … rep_149 |
+| treatment_5/sample_J/6Oclock | 300 | rep_000 … rep_149 |
+| treatment_6/sample_G/12Oclock | 150 | rep_000 … rep_149 |
+| treatment_6/sample_G/6Oclock | 150 | rep_000 … rep_149 |
+| treatment_6/sample_I/12Oclock | 150 | rep_000 … rep_149 |

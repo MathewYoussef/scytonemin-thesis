@@ -1,0 +1,23 @@
+# Template for figure provenance sidecars
+# Populate one copy per generated figure (same directory as output).
+
+figure_id: "figXX_description"
+scripts:
+  entrypoint: "path/to/script.py"
+  version: "v0.1.0"
+data_sources:
+  - path: "relative/path/to/data.csv"
+    sha256: "fill-me-in"
+  - path: "relative/path/to/other.json"
+    sha256: "fill-me-in"
+stats_summary:
+  slope: null            # e.g., 0.0829
+  slope_se: null         # e.g., 0.0286
+  intercept: null
+  intercept_se: null
+  r_squared: null
+  df: null
+  notes: ""
+runtime:
+  generated_at: "YYYY-MM-DDTHH:MM:SSZ"
+  environment: "python 3.x / matplotlib x.x"

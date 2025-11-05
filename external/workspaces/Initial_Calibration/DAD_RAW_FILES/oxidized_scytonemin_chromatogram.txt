@@ -1,0 +1,54 @@
+Quantify Compound Summary Report 											
+
+Printed Fri Oct 03 11:18:18 2025											
+
+Compound 2:  Scytonemin 384											
+
+	#	Name	Type	Std. Conc	RT	Area	IS Area	Response	Primary Flags	Conc.	%Dev
+1	1	Youssef Pig 29_09_25 Scyt Std7		0	1.38	3604		3604.003	db		
+2	2	Youssef Pig 29_09_25 Scyt Std6		0	1.38	5148		5147.643	db		
+3	3	Youssef Pig 29_09_25 Scyt Std5		0	1.38	10436		10435.87	db		
+4	4	Youssef Pig 29_09_25 Scyt Std4		0	1.39	19923		19923.289	db		
+5	5	Youssef Pig 29_09_25 Scyt Std3		0	1.39	29296		29295.666	db		
+6	6	Youssef Pig 29_09_25 Scyt Std2		0	1.39	37155		37154.68	db		
+7	7	Youssef Pig 29_09_25 Scyt Std1		0	1.39	38231		38230.609	db		
+8	8	Youssef Pig 29_09_25 Blank2		0							
+9	9	Youssef Pig 29_09_25 Chla_Carot Std8		0					MM-		
+10	10	Youssef Pig 29_09_25 Chla_Carot Std7		0					MM-
+11	11	Youssef Pig 29_09_25 Chla_Carot Std6		0					MM-
+12	12	Youssef Pig 29_09_25 Chla_Carot Std5		0					MM-
+13	13	Youssef Pig 29_09_25 Chla_Carot Std4		0					MM-
+14	14	Youssef Pig 29_09_25 Chla_Carot Std3		0					MM-
+15	15	Youssef Pig 29_09_25 Chla_Carot Std2		0					MM-
+16	16	Youssef Pig 29_09_25 Chla_Carot Std1		0					MM-
+17	17	Youssef Pig 29_09_25 Blank3		0					MM-
+18	18	Youssef Pig 29_09_25 1D		0	1.36	3466		3466.397	MM
+19	19	Youssef Pig 29_09_25 1F		0	1.36	6150		6150.223	MM
+20	20	Youssef Pig 29_09_25 1G		0	1.36	6746		6745.76	MM
+21	21	Youssef Pig 29_09_26 1I		0	1.36	3203		3203.304	MM
+22	22	Youssef Pig 29_09_27 1J		0	1.35	2237		2237.023	MM
+23	23	Youssef Pig 29_09_28 2B		0	1.36	2945		2945.137	MM
+24	24	Youssef Pig 29_09_29 2E		0	1.36	5813		5812.714	MM
+25	25	Youssef Pig 29_09_30 2G		0	1.36	4162		4161.668	MM
+26	26	Youssef Pig 29_09_31 2I		0	1.36	2466		2465.718	MM
+27	27	Youssef Pig 29_09_32 2J		0	1.35	1796		1795.651	MM
+28	28	Youssef Pig 29_09_33 3A		0	1.36	4139		4138.859	MM
+29	29	Youssef Pig 29_09_34 3C		0	1.36	8823		8823.144	MM
+30	30	Youssef Pig 29_09_35 3D		0	1.36	8164		8164.228	dd
+31	31	Youssef Pig 29_09_36 3E		0	1.36	1990		1990.129	MM
+32	32	Youssef Pig 29_09_37 3H		0	1.36	1644		1644.455	MM
+33	33	Youssef Pig 29_09_38 4A		0	1.36	1832		1832.36	MM
+34	34	Youssef Pig 29_09_39 4B		0	1.37	6123		6122.76	dd
+35	35	Youssef Pig 29_09_40 4F		0	1.36	7035		7035.175	dd
+36	36	Youssef Pig 29_09_41 4G		0	1.36	7264		7263.513	dd
+37	37	Youssef Pig 29_09_42 4H		0	1.36	2342		2342.337	dd
+38	38	Youssef Pig 29_09_43 5B		0	1.36	2964		2964.094	MM
+39	39	Youssef Pig 29_09_44 5D		0	1.36	4726		4725.772	dd
+40	40	Youssef Pig 29_09_45 5E		0	1.35	2841		2840.531	dd
+41	41	Youssef Pig 29_09_46 5F		0	1.36	3548		3547.574	dd
+42	42	Youssef Pig 29_09_47 5I		0	1.35	2632		2632.126	dd
+43	43	Youssef Pig 29_09_48 6C		0	1.37	3272		3271.983	dd
+44	44	Youssef Pig 29_09_49 6D		0	1.37	7751		7751.294	MM
+45	45	Youssef Pig 29_09_50 6F		0	1.25	786		785.856	MM
+46	46	Youssef Pig 29_09_51 6H		0	1.25	756		755.607	MM
+47	47	Youssef Pig 29_09_52 6J		0	1.23	361		360.696	MM

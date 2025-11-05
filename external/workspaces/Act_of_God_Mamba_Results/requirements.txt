@@ -1,0 +1,8 @@
+torch==2.3.0
+torchvision==0.18.0
+numpy==1.26.4
+pandas>=2.0
+scipy>=1.10
+mamba-ssm[causal-conv1d]==2.2.5
+scikit-learn>=1.3
+tensorboard>=2.0

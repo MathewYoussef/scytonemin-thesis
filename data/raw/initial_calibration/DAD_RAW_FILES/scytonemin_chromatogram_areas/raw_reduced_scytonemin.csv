@@ -1,0 +1,48 @@
+sequence_id,sample_name,sample_category,standard_level,standard_concentration_mg_ml,retention_time_min,area,response,primary_flags,calculated_conc_reported,percent_deviation,source_file
+1,Youssef Pig 29_09_25 Scyt Std7,standard,7,0.023,1.1,1969.0,1968.81,MM,,,Yousseff Red Scyt 29_09_25.txt
+2,Youssef Pig 29_09_25 Scyt Std6,standard,6,0.047,1.1,2757.0,2756.937,MM,,,Yousseff Red Scyt 29_09_25.txt
+3,Youssef Pig 29_09_25 Scyt Std5,standard,5,0.095,1.11,5198.0,5198.336,MM,,,Yousseff Red Scyt 29_09_25.txt
+4,Youssef Pig 29_09_25 Scyt Std4,standard,4,0.189,1.11,10057.0,10056.758,MM,,,Yousseff Red Scyt 29_09_25.txt
+5,Youssef Pig 29_09_25 Scyt Std3,standard,3,0.284,1.12,14572.0,14571.716,MM,,,Yousseff Red Scyt 29_09_25.txt
+6,Youssef Pig 29_09_25 Scyt Std2,standard,2,0.378,1.13,18864.0,18864.211,MM,,,Yousseff Red Scyt 29_09_25.txt
+7,Youssef Pig 29_09_25 Scyt Std1,standard,1,0.473,1.12,23954.0,23954.328,MM,,,Yousseff Red Scyt 29_09_25.txt
+8,Youssef Pig 29_09_25 Blank2,blank,,,,,,MM-,,,Yousseff Red Scyt 29_09_25.txt
+9,Youssef Pig 29_09_25 Chla_Carot Std8,standard,8,,,,,MM-,,,Yousseff Red Scyt 29_09_25.txt
+10,Youssef Pig 29_09_25 Chla_Carot Std7,standard,7,0.023,,,,MM-,,,Yousseff Red Scyt 29_09_25.txt
+11,Youssef Pig 29_09_25 Chla_Carot Std6,standard,6,0.047,,,,MM-,,,Yousseff Red Scyt 29_09_25.txt
+12,Youssef Pig 29_09_25 Chla_Carot Std5,standard,5,0.095,,,,MM-,,,Yousseff Red Scyt 29_09_25.txt
+13,Youssef Pig 29_09_25 Chla_Carot Std4,standard,4,0.189,,,,MM-,,,Yousseff Red Scyt 29_09_25.txt
+14,Youssef Pig 29_09_25 Chla_Carot Std3,standard,3,0.284,,,,MM-,,,Yousseff Red Scyt 29_09_25.txt
+15,Youssef Pig 29_09_25 Chla_Carot Std2,standard,2,0.378,,,,MM-,,,Yousseff Red Scyt 29_09_25.txt
+16,Youssef Pig 29_09_25 Chla_Carot Std1,standard,1,0.473,,,,MM-,,,Yousseff Red Scyt 29_09_25.txt
+17,Youssef Pig 29_09_25 Blank3,blank,,,,,,MM-,,,Yousseff Red Scyt 29_09_25.txt
+18,Youssef Pig 29_09_25 1D,sample,,,1.11,7029.0,7029.072,MM,,,Yousseff Red Scyt 29_09_25.txt
+19,Youssef Pig 29_09_25 1F,sample,,,1.12,6830.0,6830.183,MM,,,Yousseff Red Scyt 29_09_25.txt
+20,Youssef Pig 29_09_25 1G,sample,,,1.12,3597.0,3596.774,MM,,,Yousseff Red Scyt 29_09_25.txt
+21,Youssef Pig 29_09_26 1I,sample,,,1.11,3089.0,3088.806,MM,,,Yousseff Red Scyt 29_09_25.txt
+22,Youssef Pig 29_09_27 1J,sample,,,1.12,10467.0,10466.886,bd,,,Yousseff Red Scyt 29_09_25.txt
+23,Youssef Pig 29_09_28 2B,sample,,,1.12,13284.0,13283.653,bd,,,Yousseff Red Scyt 29_09_25.txt
+24,Youssef Pig 29_09_29 2E,sample,,,1.12,4289.0,4289.088,MM,,,Yousseff Red Scyt 29_09_25.txt
+25,Youssef Pig 29_09_30 2G,sample,,,1.09,3596.0,3595.799,MM,,,Yousseff Red Scyt 29_09_25.txt
+26,Youssef Pig 29_09_31 2I,sample,,,1.11,7499.0,7498.969,bd,,,Yousseff Red Scyt 29_09_25.txt
+27,Youssef Pig 29_09_32 2J,sample,,,1.11,9441.0,9441.408,bd,,,Yousseff Red Scyt 29_09_25.txt
+28,Youssef Pig 29_09_33 3A,sample,,,1.12,3885.0,3885.474,MM,,,Yousseff Red Scyt 29_09_25.txt
+29,Youssef Pig 29_09_34 3C,sample,,,1.12,4468.0,4467.774,MM,,,Yousseff Red Scyt 29_09_25.txt
+30,Youssef Pig 29_09_35 3D,sample,,,1.12,6072.0,6072.107,bd,,,Yousseff Red Scyt 29_09_25.txt
+31,Youssef Pig 29_09_36 3E,sample,,,1.11,6330.0,6329.524,bd,,,Yousseff Red Scyt 29_09_25.txt
+32,Youssef Pig 29_09_37 3H,sample,,,1.12,7093.0,7092.5,bd,,,Yousseff Red Scyt 29_09_25.txt
+33,Youssef Pig 29_09_38 4A,sample,,,1.11,5434.0,5434.264,MM,,,Yousseff Red Scyt 29_09_25.txt
+34,Youssef Pig 29_09_39 4B,sample,,,1.12,4630.0,4629.622,MM,,,Yousseff Red Scyt 29_09_25.txt
+35,Youssef Pig 29_09_40 4F,sample,,,1.13,4156.0,4156.064,MM,,,Yousseff Red Scyt 29_09_25.txt
+36,Youssef Pig 29_09_41 4G,sample,,,1.11,3873.0,3873.079,MM,,,Yousseff Red Scyt 29_09_25.txt
+37,Youssef Pig 29_09_42 4H,sample,,,1.11,5362.0,5361.727,bd,,,Yousseff Red Scyt 29_09_25.txt
+38,Youssef Pig 29_09_43 5B,sample,,,1.12,6038.0,6037.572,bd,,,Yousseff Red Scyt 29_09_25.txt
+39,Youssef Pig 29_09_44 5D,sample,,,1.11,4964.0,4964.403,MM,,,Yousseff Red Scyt 29_09_25.txt
+40,Youssef Pig 29_09_45 5E,sample,,,1.11,5324.0,5323.566,bd,,,Yousseff Red Scyt 29_09_25.txt
+41,Youssef Pig 29_09_46 5F,sample,,,1.1,7884.0,7884.014,MM,,,Yousseff Red Scyt 29_09_25.txt
+42,Youssef Pig 29_09_47 5I,sample,,,1.1,3646.0,3646.293,bd,,,Yousseff Red Scyt 29_09_25.txt
+43,Youssef Pig 29_09_48 6C,sample,,,1.11,4539.0,4539.429,MM,,,Yousseff Red Scyt 29_09_25.txt
+44,Youssef Pig 29_09_49 6D,sample,,,1.13,3851.0,3850.795,MM,,,Yousseff Red Scyt 29_09_25.txt
+45,Youssef Pig 29_09_50 6F,sample,,,1.15,2721.0,2721.259,MM,,,Yousseff Red Scyt 29_09_25.txt
+46,Youssef Pig 29_09_51 6H,sample,,,1.12,2454.0,2454.393,MM,,,Yousseff Red Scyt 29_09_25.txt
+47,Youssef Pig 29_09_52 6J,sample,,,1.13,1651.0,1651.469,MM,,,Yousseff Red Scyt 29_09_25.txt

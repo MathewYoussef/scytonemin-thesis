@@ -1,0 +1,611 @@
+2025-10-09 01:11:37,102 | INFO | Audit log path: /mnt/Act_of_God/logs/god_run/auditing_manifest.log
+2025-10-09 01:11:37,357 | INFO | Using device: cuda
+2025-10-09 01:11:38,310 | INFO | Loading initial weights from /mnt/Act_of_God/checkpoints/prod/Track_H_fold_02/mamba_tiny_uv_best.pt
+2025-10-09 01:11:43,813 | INFO | Train manifest: /mnt/Act_of_God/data/spectra_for_fold/manifest_train.csv
+2025-10-09 01:11:43,813 | INFO | Training spectra: 10350 | batches per epoch: 17
+2025-10-09 01:11:43,813 | INFO | Validation manifest: /mnt/Act_of_God/data/validation_panel.csv
+2025-10-09 01:11:43,813 | INFO | Validation spectra: 750
+2025-10-09 01:14:25,769 | INFO | Epoch 1/400 | train_loss=27.076412 | lr=3.000000e-10
+2025-10-09 01:14:31,501 | INFO |   val_loss=39.997845 | PSNR=22.16 dB | SAM=11.360°
+2025-10-09 01:14:31,650 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 01:17:13,632 | INFO | Epoch 2/400 | train_loss=27.582245 | lr=6.000024e-05
+2025-10-09 01:17:19,605 | INFO |   val_loss=39.794362 | PSNR=22.24 dB | SAM=11.233°
+2025-10-09 01:17:19,853 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 01:20:03,938 | INFO | Epoch 3/400 | train_loss=15.696302 | lr=1.200002e-04
+2025-10-09 01:20:09,458 | INFO |   val_loss=39.406421 | PSNR=22.34 dB | SAM=11.095°
+2025-10-09 01:20:09,672 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 01:22:53,676 | INFO | Epoch 4/400 | train_loss=9.397130 | lr=1.800001e-04
+2025-10-09 01:22:59,483 | INFO |   val_loss=38.871773 | PSNR=22.47 dB | SAM=10.923°
+2025-10-09 01:22:59,691 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 01:25:41,937 | INFO | Epoch 5/400 | train_loss=8.233981 | lr=2.400001e-04
+2025-10-09 01:25:47,255 | INFO |   val_loss=38.327624 | PSNR=22.60 dB | SAM=10.745°
+2025-10-09 01:25:47,447 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 01:28:30,989 | INFO | Epoch 6/400 | train_loss=10.121875 | lr=3.000000e-04
+2025-10-09 01:28:36,352 | INFO |   val_loss=37.814256 | PSNR=22.72 dB | SAM=10.576°
+2025-10-09 01:28:36,520 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 01:31:18,049 | INFO | Epoch 7/400 | train_loss=12.877147 | lr=2.999957e-04
+2025-10-09 01:31:23,513 | INFO |   val_loss=37.388240 | PSNR=22.84 dB | SAM=10.419°
+2025-10-09 01:31:23,714 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:11:07,862 | INFO | Epoch 8/400 | train_loss=8.888467 | lr=2.999829e-04
+2025-10-09 04:11:13,364 | INFO |   val_loss=36.870017 | PSNR=22.97 dB | SAM=10.243°
+2025-10-09 04:11:13,552 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:13:58,637 | INFO | Epoch 9/400 | train_loss=7.646348 | lr=2.999616e-04
+2025-10-09 04:14:03,993 | INFO |   val_loss=36.333974 | PSNR=23.12 dB | SAM=10.058°
+2025-10-09 04:14:04,195 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:16:54,648 | INFO | Epoch 10/400 | train_loss=7.493898 | lr=2.999317e-04
+2025-10-09 04:17:00,234 | INFO |   val_loss=35.796888 | PSNR=23.27 dB | SAM=9.874°
+2025-10-09 04:17:00,412 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:19:40,867 | INFO | Epoch 11/400 | train_loss=6.725239 | lr=2.998933e-04
+2025-10-09 04:19:46,459 | INFO |   val_loss=35.259714 | PSNR=23.42 dB | SAM=9.688°
+2025-10-09 04:19:46,665 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:22:27,333 | INFO | Epoch 12/400 | train_loss=6.586832 | lr=2.998463e-04
+2025-10-09 04:22:32,824 | INFO |   val_loss=34.729112 | PSNR=23.57 dB | SAM=9.505°
+2025-10-09 04:22:33,002 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:25:14,293 | INFO | Epoch 13/400 | train_loss=6.573687 | lr=2.997908e-04
+2025-10-09 04:25:19,641 | INFO |   val_loss=34.205398 | PSNR=23.73 dB | SAM=9.324°
+2025-10-09 04:25:19,827 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:28:00,181 | INFO | Epoch 14/400 | train_loss=6.529917 | lr=2.997268e-04
+2025-10-09 04:28:05,541 | INFO |   val_loss=33.688700 | PSNR=23.88 dB | SAM=9.146°
+2025-10-09 04:28:05,708 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:30:55,419 | INFO | Epoch 15/400 | train_loss=6.373435 | lr=2.996543e-04
+2025-10-09 04:31:00,923 | INFO |   val_loss=33.178828 | PSNR=24.03 dB | SAM=8.970°
+2025-10-09 04:31:01,106 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:33:42,977 | INFO | Epoch 16/400 | train_loss=6.472607 | lr=2.995732e-04
+2025-10-09 04:33:48,625 | INFO |   val_loss=32.677100 | PSNR=24.18 dB | SAM=8.797°
+2025-10-09 04:33:48,812 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:36:33,840 | INFO | Epoch 17/400 | train_loss=6.446277 | lr=2.994837e-04
+2025-10-09 04:36:39,118 | INFO |   val_loss=32.183116 | PSNR=24.34 dB | SAM=8.626°
+2025-10-09 04:36:39,295 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:39:21,945 | INFO | Epoch 18/400 | train_loss=6.333506 | lr=2.993856e-04
+2025-10-09 04:39:27,735 | INFO |   val_loss=31.692854 | PSNR=24.49 dB | SAM=8.456°
+2025-10-09 04:39:27,942 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:42:23,255 | INFO | Epoch 19/400 | train_loss=6.280905 | lr=2.992790e-04
+2025-10-09 04:42:28,873 | INFO |   val_loss=31.212732 | PSNR=24.64 dB | SAM=8.289°
+2025-10-09 04:42:29,046 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:45:12,671 | INFO | Epoch 20/400 | train_loss=6.359971 | lr=2.991640e-04
+2025-10-09 04:45:18,336 | INFO |   val_loss=30.740611 | PSNR=24.80 dB | SAM=8.126°
+2025-10-09 04:45:18,543 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:48:02,814 | INFO | Epoch 21/400 | train_loss=6.272716 | lr=2.990404e-04
+2025-10-09 04:48:08,415 | INFO |   val_loss=30.269336 | PSNR=24.95 dB | SAM=7.963°
+2025-10-09 04:48:08,658 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:50:51,963 | INFO | Epoch 22/400 | train_loss=6.285270 | lr=2.989084e-04
+2025-10-09 04:50:57,411 | INFO |   val_loss=29.810836 | PSNR=25.11 dB | SAM=7.805°
+2025-10-09 04:50:57,602 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:53:53,469 | INFO | Epoch 23/400 | train_loss=6.246453 | lr=2.987679e-04
+2025-10-09 04:53:59,331 | INFO |   val_loss=29.355668 | PSNR=25.26 dB | SAM=7.649°
+2025-10-09 04:53:59,532 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:56:54,544 | INFO | Epoch 24/400 | train_loss=6.289248 | lr=2.986189e-04
+2025-10-09 04:57:00,110 | INFO |   val_loss=28.910897 | PSNR=25.42 dB | SAM=7.496°
+2025-10-09 04:57:00,323 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 04:59:41,472 | INFO | Epoch 25/400 | train_loss=6.401167 | lr=2.984615e-04
+2025-10-09 04:59:46,940 | INFO |   val_loss=28.472049 | PSNR=25.57 dB | SAM=7.347°
+2025-10-09 04:59:47,156 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:02:27,648 | INFO | Epoch 26/400 | train_loss=6.431552 | lr=2.982957e-04
+2025-10-09 05:02:33,189 | INFO |   val_loss=28.037482 | PSNR=25.73 dB | SAM=7.199°
+2025-10-09 05:02:33,379 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:05:18,938 | INFO | Epoch 27/400 | train_loss=6.195767 | lr=2.981214e-04
+2025-10-09 05:05:25,521 | INFO |   val_loss=27.609994 | PSNR=25.88 dB | SAM=7.054°
+2025-10-09 05:05:25,719 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:08:04,907 | INFO | Epoch 28/400 | train_loss=6.161210 | lr=2.979387e-04
+2025-10-09 05:08:10,598 | INFO |   val_loss=27.188005 | PSNR=26.04 dB | SAM=6.912°
+2025-10-09 05:08:10,770 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:10:50,681 | INFO | Epoch 29/400 | train_loss=6.387165 | lr=2.977476e-04
+2025-10-09 05:10:56,065 | INFO |   val_loss=26.770997 | PSNR=26.20 dB | SAM=6.771°
+2025-10-09 05:10:56,273 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:13:37,697 | INFO | Epoch 30/400 | train_loss=6.378477 | lr=2.975480e-04
+2025-10-09 05:13:43,103 | INFO |   val_loss=26.363870 | PSNR=26.35 dB | SAM=6.635°
+2025-10-09 05:13:43,279 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:16:23,701 | INFO | Epoch 31/400 | train_loss=6.276676 | lr=2.973401e-04
+2025-10-09 05:16:29,184 | INFO |   val_loss=25.966671 | PSNR=26.51 dB | SAM=6.501°
+2025-10-09 05:16:29,385 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:19:11,337 | INFO | Epoch 32/400 | train_loss=6.422004 | lr=2.971239e-04
+2025-10-09 05:19:17,020 | INFO |   val_loss=25.576643 | PSNR=26.66 dB | SAM=6.369°
+2025-10-09 05:19:17,230 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:22:01,089 | INFO | Epoch 33/400 | train_loss=6.583469 | lr=2.968992e-04
+2025-10-09 05:22:06,694 | INFO |   val_loss=25.190326 | PSNR=26.82 dB | SAM=6.240°
+2025-10-09 05:22:06,889 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:24:53,327 | INFO | Epoch 34/400 | train_loss=6.419432 | lr=2.966663e-04
+2025-10-09 05:24:58,701 | INFO |   val_loss=24.812402 | PSNR=26.97 dB | SAM=6.113°
+2025-10-09 05:24:58,909 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:27:46,358 | INFO | Epoch 35/400 | train_loss=6.208116 | lr=2.964250e-04
+2025-10-09 05:27:52,801 | INFO |   val_loss=24.440990 | PSNR=27.12 dB | SAM=5.989°
+2025-10-09 05:27:53,040 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:30:35,604 | INFO | Epoch 36/400 | train_loss=6.160422 | lr=2.961754e-04
+2025-10-09 05:30:41,138 | INFO |   val_loss=24.072217 | PSNR=27.28 dB | SAM=5.867°
+2025-10-09 05:30:41,346 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:33:25,308 | INFO | Epoch 37/400 | train_loss=6.193578 | lr=2.959174e-04
+2025-10-09 05:33:30,890 | INFO |   val_loss=23.706175 | PSNR=27.43 dB | SAM=5.746°
+2025-10-09 05:33:31,110 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:36:12,777 | INFO | Epoch 38/400 | train_loss=6.225700 | lr=2.956513e-04
+2025-10-09 05:36:18,366 | INFO |   val_loss=23.351788 | PSNR=27.59 dB | SAM=5.630°
+2025-10-09 05:36:18,578 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:38:57,617 | INFO | Epoch 39/400 | train_loss=6.149343 | lr=2.953768e-04
+2025-10-09 05:39:03,486 | INFO |   val_loss=23.006350 | PSNR=27.74 dB | SAM=5.517°
+2025-10-09 05:39:03,716 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:41:43,800 | INFO | Epoch 40/400 | train_loss=6.081900 | lr=2.950941e-04
+2025-10-09 05:41:49,131 | INFO |   val_loss=22.667417 | PSNR=27.89 dB | SAM=5.408°
+2025-10-09 05:41:49,325 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:44:34,077 | INFO | Epoch 41/400 | train_loss=6.234730 | lr=2.948032e-04
+2025-10-09 05:44:39,723 | INFO |   val_loss=22.336276 | PSNR=28.04 dB | SAM=5.300°
+2025-10-09 05:44:39,918 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:47:33,432 | INFO | Epoch 42/400 | train_loss=6.216454 | lr=2.945040e-04
+2025-10-09 05:47:38,908 | INFO |   val_loss=22.009812 | PSNR=28.19 dB | SAM=5.195°
+2025-10-09 05:47:39,120 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:50:27,448 | INFO | Epoch 43/400 | train_loss=6.146626 | lr=2.941967e-04
+2025-10-09 05:50:32,986 | INFO |   val_loss=21.694113 | PSNR=28.34 dB | SAM=5.092°
+2025-10-09 05:50:33,155 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:53:13,700 | INFO | Epoch 44/400 | train_loss=6.108620 | lr=2.938812e-04
+2025-10-09 05:53:19,343 | INFO |   val_loss=21.382037 | PSNR=28.49 dB | SAM=4.992°
+2025-10-09 05:53:19,516 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:56:02,564 | INFO | Epoch 45/400 | train_loss=6.123485 | lr=2.935575e-04
+2025-10-09 05:56:07,955 | INFO |   val_loss=21.077593 | PSNR=28.64 dB | SAM=4.894°
+2025-10-09 05:56:08,160 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 05:58:48,461 | INFO | Epoch 46/400 | train_loss=6.136600 | lr=2.932257e-04
+2025-10-09 05:58:53,980 | INFO |   val_loss=20.780489 | PSNR=28.78 dB | SAM=4.799°
+2025-10-09 05:58:54,206 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:01:33,123 | INFO | Epoch 47/400 | train_loss=6.141858 | lr=2.928858e-04
+2025-10-09 06:01:38,462 | INFO |   val_loss=20.488097 | PSNR=28.93 dB | SAM=4.707°
+2025-10-09 06:01:38,632 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:04:22,358 | INFO | Epoch 48/400 | train_loss=6.246744 | lr=2.925378e-04
+2025-10-09 06:04:28,237 | INFO |   val_loss=20.198602 | PSNR=29.07 dB | SAM=4.616°
+2025-10-09 06:04:28,476 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:07:11,877 | INFO | Epoch 49/400 | train_loss=6.168620 | lr=2.921818e-04
+2025-10-09 06:07:17,303 | INFO |   val_loss=19.916688 | PSNR=29.22 dB | SAM=4.528°
+2025-10-09 06:07:17,500 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:10:04,976 | INFO | Epoch 50/400 | train_loss=6.063160 | lr=2.918177e-04
+2025-10-09 06:10:10,535 | INFO |   val_loss=19.639392 | PSNR=29.36 dB | SAM=4.441°
+2025-10-09 06:10:10,709 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:12:52,232 | INFO | Epoch 51/400 | train_loss=6.224179 | lr=2.914455e-04
+2025-10-09 06:12:57,878 | INFO |   val_loss=19.367764 | PSNR=29.50 dB | SAM=4.356°
+2025-10-09 06:12:58,053 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:15:48,901 | INFO | Epoch 52/400 | train_loss=6.220004 | lr=2.910654e-04
+2025-10-09 06:15:54,223 | INFO |   val_loss=19.101919 | PSNR=29.64 dB | SAM=4.274°
+2025-10-09 06:15:54,433 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:18:39,886 | INFO | Epoch 53/400 | train_loss=6.098550 | lr=2.906773e-04
+2025-10-09 06:18:45,363 | INFO |   val_loss=18.837551 | PSNR=29.79 dB | SAM=4.193°
+2025-10-09 06:18:45,557 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:21:26,149 | INFO | Epoch 54/400 | train_loss=6.283563 | lr=2.902812e-04
+2025-10-09 06:21:31,674 | INFO |   val_loss=18.582105 | PSNR=29.93 dB | SAM=4.114°
+2025-10-09 06:21:31,881 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:24:16,122 | INFO | Epoch 55/400 | train_loss=6.242754 | lr=2.898773e-04
+2025-10-09 06:24:21,703 | INFO |   val_loss=18.334097 | PSNR=30.06 dB | SAM=4.039°
+2025-10-09 06:24:21,908 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:27:02,983 | INFO | Epoch 56/400 | train_loss=6.217313 | lr=2.894654e-04
+2025-10-09 06:27:08,294 | INFO |   val_loss=18.084697 | PSNR=30.20 dB | SAM=3.964°
+2025-10-09 06:27:08,484 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:29:48,943 | INFO | Epoch 57/400 | train_loss=6.118911 | lr=2.890456e-04
+2025-10-09 06:29:54,232 | INFO |   val_loss=17.843276 | PSNR=30.34 dB | SAM=3.892°
+2025-10-09 06:29:54,409 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:32:34,167 | INFO | Epoch 58/400 | train_loss=6.049058 | lr=2.886180e-04
+2025-10-09 06:32:39,433 | INFO |   val_loss=17.603727 | PSNR=30.48 dB | SAM=3.820°
+2025-10-09 06:32:39,609 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:35:18,690 | INFO | Epoch 59/400 | train_loss=6.254982 | lr=2.881826e-04
+2025-10-09 06:35:24,241 | INFO |   val_loss=17.375823 | PSNR=30.61 dB | SAM=3.751°
+2025-10-09 06:35:24,434 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:38:04,637 | INFO | Epoch 60/400 | train_loss=6.230486 | lr=2.877394e-04
+2025-10-09 06:38:09,907 | INFO |   val_loss=17.150134 | PSNR=30.75 dB | SAM=3.683°
+2025-10-09 06:38:10,066 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:40:50,949 | INFO | Epoch 61/400 | train_loss=6.134338 | lr=2.872885e-04
+2025-10-09 06:40:57,030 | INFO |   val_loss=16.928696 | PSNR=30.88 dB | SAM=3.617°
+2025-10-09 06:40:57,262 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:43:38,336 | INFO | Epoch 62/400 | train_loss=6.123229 | lr=2.868297e-04
+2025-10-09 06:43:43,714 | INFO |   val_loss=16.714161 | PSNR=31.01 dB | SAM=3.553°
+2025-10-09 06:43:43,923 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:46:27,415 | INFO | Epoch 63/400 | train_loss=6.120570 | lr=2.863633e-04
+2025-10-09 06:46:32,780 | INFO |   val_loss=16.503075 | PSNR=31.14 dB | SAM=3.490°
+2025-10-09 06:46:32,974 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:49:14,473 | INFO | Epoch 64/400 | train_loss=6.071091 | lr=2.858892e-04
+2025-10-09 06:49:20,277 | INFO |   val_loss=16.293750 | PSNR=31.27 dB | SAM=3.429°
+2025-10-09 06:49:20,453 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:52:12,221 | INFO | Epoch 65/400 | train_loss=6.149713 | lr=2.854075e-04
+2025-10-09 06:52:17,696 | INFO |   val_loss=16.088229 | PSNR=31.40 dB | SAM=3.369°
+2025-10-09 06:52:17,897 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:54:59,644 | INFO | Epoch 66/400 | train_loss=6.185709 | lr=2.849182e-04
+2025-10-09 06:55:05,059 | INFO |   val_loss=15.889735 | PSNR=31.53 dB | SAM=3.311°
+2025-10-09 06:55:05,255 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 06:57:45,152 | INFO | Epoch 67/400 | train_loss=6.131597 | lr=2.844212e-04
+2025-10-09 06:57:50,761 | INFO |   val_loss=15.694743 | PSNR=31.66 dB | SAM=3.254°
+2025-10-09 06:57:50,962 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:00:31,418 | INFO | Epoch 68/400 | train_loss=6.107659 | lr=2.839167e-04
+2025-10-09 07:00:37,111 | INFO |   val_loss=15.507143 | PSNR=31.78 dB | SAM=3.200°
+2025-10-09 07:00:37,356 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:03:23,395 | INFO | Epoch 69/400 | train_loss=6.272226 | lr=2.834047e-04
+2025-10-09 07:03:29,421 | INFO |   val_loss=15.322184 | PSNR=31.91 dB | SAM=3.147°
+2025-10-09 07:03:29,658 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:06:12,597 | INFO | Epoch 70/400 | train_loss=6.089012 | lr=2.828852e-04
+2025-10-09 07:06:17,919 | INFO |   val_loss=15.137571 | PSNR=32.03 dB | SAM=3.093°
+2025-10-09 07:06:18,090 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:09:01,160 | INFO | Epoch 71/400 | train_loss=6.120453 | lr=2.823582e-04
+2025-10-09 07:09:06,567 | INFO |   val_loss=14.960244 | PSNR=32.15 dB | SAM=3.043°
+2025-10-09 07:09:06,737 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:11:49,139 | INFO | Epoch 72/400 | train_loss=6.227073 | lr=2.818239e-04
+2025-10-09 07:11:54,604 | INFO |   val_loss=14.780825 | PSNR=32.28 dB | SAM=2.993°
+2025-10-09 07:11:54,777 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:14:37,821 | INFO | Epoch 73/400 | train_loss=6.241105 | lr=2.812821e-04
+2025-10-09 07:14:43,688 | INFO |   val_loss=14.608532 | PSNR=32.40 dB | SAM=2.944°
+2025-10-09 07:17:34,739 | INFO | Epoch 74/400 | train_loss=6.121090 | lr=2.807329e-04
+2025-10-09 07:17:40,342 | INFO |   val_loss=14.437591 | PSNR=32.52 dB | SAM=2.897°
+2025-10-09 07:17:40,532 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:20:19,619 | INFO | Epoch 75/400 | train_loss=6.155441 | lr=2.801765e-04
+2025-10-09 07:20:24,863 | INFO |   val_loss=14.266114 | PSNR=32.64 dB | SAM=2.849°
+2025-10-09 07:23:06,514 | INFO | Epoch 76/400 | train_loss=6.104923 | lr=2.796128e-04
+2025-10-09 07:23:12,431 | INFO |   val_loss=14.103681 | PSNR=32.76 dB | SAM=2.805°
+2025-10-09 07:23:12,622 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:25:54,982 | INFO | Epoch 77/400 | train_loss=6.130231 | lr=2.790418e-04
+2025-10-09 07:26:00,456 | INFO |   val_loss=13.938229 | PSNR=32.88 dB | SAM=2.760°
+2025-10-09 07:28:41,208 | INFO | Epoch 78/400 | train_loss=6.078606 | lr=2.784636e-04
+2025-10-09 07:28:46,931 | INFO |   val_loss=13.784998 | PSNR=32.99 dB | SAM=2.718°
+2025-10-09 07:28:47,116 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:31:28,607 | INFO | Epoch 79/400 | train_loss=6.094426 | lr=2.778782e-04
+2025-10-09 07:31:34,044 | INFO |   val_loss=13.631763 | PSNR=33.11 dB | SAM=2.676°
+2025-10-09 07:34:16,573 | INFO | Epoch 80/400 | train_loss=6.047596 | lr=2.772857e-04
+2025-10-09 07:34:22,069 | INFO |   val_loss=13.478374 | PSNR=33.22 dB | SAM=2.634°
+2025-10-09 07:34:22,267 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:37:12,181 | INFO | Epoch 81/400 | train_loss=6.024910 | lr=2.766860e-04
+2025-10-09 07:37:17,985 | INFO |   val_loss=13.334449 | PSNR=33.33 dB | SAM=2.595°
+2025-10-09 07:40:06,908 | INFO | Epoch 82/400 | train_loss=6.082851 | lr=2.760794e-04
+2025-10-09 07:40:12,753 | INFO |   val_loss=13.188173 | PSNR=33.45 dB | SAM=2.555°
+2025-10-09 07:40:12,928 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:42:53,045 | INFO | Epoch 83/400 | train_loss=6.075732 | lr=2.754656e-04
+2025-10-09 07:42:58,593 | INFO |   val_loss=13.043071 | PSNR=33.56 dB | SAM=2.517°
+2025-10-09 07:45:37,799 | INFO | Epoch 84/400 | train_loss=6.062099 | lr=2.748449e-04
+2025-10-09 07:45:43,356 | INFO |   val_loss=12.908010 | PSNR=33.67 dB | SAM=2.481°
+2025-10-09 07:45:43,556 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:48:24,057 | INFO | Epoch 85/400 | train_loss=6.031715 | lr=2.742173e-04
+2025-10-09 07:48:29,789 | INFO |   val_loss=12.766446 | PSNR=33.78 dB | SAM=2.443°
+2025-10-09 07:51:09,804 | INFO | Epoch 86/400 | train_loss=6.046576 | lr=2.735827e-04
+2025-10-09 07:51:15,366 | INFO |   val_loss=12.630703 | PSNR=33.89 dB | SAM=2.408°
+2025-10-09 07:51:15,574 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:54:03,202 | INFO | Epoch 87/400 | train_loss=6.034993 | lr=2.729413e-04
+2025-10-09 07:54:08,764 | INFO |   val_loss=12.496499 | PSNR=34.00 dB | SAM=2.373°
+2025-10-09 07:56:49,757 | INFO | Epoch 88/400 | train_loss=6.028540 | lr=2.722931e-04
+2025-10-09 07:56:55,316 | INFO |   val_loss=12.368752 | PSNR=34.10 dB | SAM=2.340°
+2025-10-09 07:56:55,640 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 07:59:42,075 | INFO | Epoch 89/400 | train_loss=6.104526 | lr=2.716380e-04
+2025-10-09 07:59:47,438 | INFO |   val_loss=12.239874 | PSNR=34.21 dB | SAM=2.307°
+2025-10-09 08:02:27,547 | INFO | Epoch 90/400 | train_loss=6.132938 | lr=2.709762e-04
+2025-10-09 08:02:33,080 | INFO |   val_loss=12.117234 | PSNR=34.31 dB | SAM=2.275°
+2025-10-09 08:02:33,280 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 08:05:18,775 | INFO | Epoch 91/400 | train_loss=6.060429 | lr=2.703077e-04
+2025-10-09 08:05:24,071 | INFO |   val_loss=11.993955 | PSNR=34.41 dB | SAM=2.244°
+2025-10-09 08:08:02,130 | INFO | Epoch 92/400 | train_loss=6.068443 | lr=2.696326e-04
+2025-10-09 08:08:07,495 | INFO |   val_loss=11.871857 | PSNR=34.52 dB | SAM=2.214°
+2025-10-09 08:08:07,660 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 08:10:49,469 | INFO | Epoch 93/400 | train_loss=6.054615 | lr=2.689508e-04
+2025-10-09 08:10:54,886 | INFO |   val_loss=11.754856 | PSNR=34.62 dB | SAM=2.184°
+2025-10-09 08:13:37,060 | INFO | Epoch 94/400 | train_loss=6.086848 | lr=2.682625e-04
+2025-10-09 08:13:42,652 | INFO |   val_loss=11.635786 | PSNR=34.72 dB | SAM=2.155°
+2025-10-09 08:13:42,833 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 08:16:25,039 | INFO | Epoch 95/400 | train_loss=6.046009 | lr=2.675676e-04
+2025-10-09 08:16:30,772 | INFO |   val_loss=11.520031 | PSNR=34.82 dB | SAM=2.128°
+2025-10-09 08:19:12,687 | INFO | Epoch 96/400 | train_loss=6.021062 | lr=2.668662e-04
+2025-10-09 08:19:18,226 | INFO |   val_loss=11.412836 | PSNR=34.91 dB | SAM=2.101°
+2025-10-09 08:19:18,395 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 08:21:59,853 | INFO | Epoch 97/400 | train_loss=6.069632 | lr=2.661584e-04
+2025-10-09 08:22:05,252 | INFO |   val_loss=11.297712 | PSNR=35.01 dB | SAM=2.073°
+2025-10-09 08:24:48,718 | INFO | Epoch 98/400 | train_loss=6.026899 | lr=2.654442e-04
+2025-10-09 08:24:54,619 | INFO |   val_loss=11.187358 | PSNR=35.11 dB | SAM=2.047°
+2025-10-09 08:24:54,927 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 08:27:56,370 | INFO | Epoch 99/400 | train_loss=6.005278 | lr=2.647236e-04
+2025-10-09 08:28:02,246 | INFO |   val_loss=11.079173 | PSNR=35.20 dB | SAM=2.021°
+2025-10-09 08:31:07,760 | INFO | Epoch 100/400 | train_loss=6.011360 | lr=2.639968e-04
+2025-10-09 08:31:13,449 | INFO |   val_loss=10.971473 | PSNR=35.30 dB | SAM=1.996°
+2025-10-09 08:31:13,617 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 08:34:06,101 | INFO | Epoch 101/400 | train_loss=6.068276 | lr=2.632636e-04
+2025-10-09 08:34:11,522 | INFO |   val_loss=10.868416 | PSNR=35.39 dB | SAM=1.971°
+2025-10-09 08:36:52,999 | INFO | Epoch 102/400 | train_loss=6.033681 | lr=2.625243e-04
+2025-10-09 08:36:58,265 | INFO |   val_loss=10.768081 | PSNR=35.48 dB | SAM=1.948°
+2025-10-09 08:39:38,194 | INFO | Epoch 103/400 | train_loss=6.064342 | lr=2.617788e-04
+2025-10-09 08:39:43,651 | INFO |   val_loss=10.661399 | PSNR=35.58 dB | SAM=1.925°
+2025-10-09 08:39:43,820 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 08:42:25,786 | INFO | Epoch 104/400 | train_loss=6.099319 | lr=2.610271e-04
+2025-10-09 08:42:31,618 | INFO |   val_loss=10.567494 | PSNR=35.67 dB | SAM=1.903°
+2025-10-09 08:45:21,085 | INFO | Epoch 105/400 | train_loss=6.076094 | lr=2.602694e-04
+2025-10-09 08:45:26,555 | INFO |   val_loss=10.469386 | PSNR=35.76 dB | SAM=1.880°
+2025-10-09 08:48:09,305 | INFO | Epoch 106/400 | train_loss=6.023812 | lr=2.595057e-04
+2025-10-09 08:48:14,617 | INFO |   val_loss=10.367918 | PSNR=35.85 dB | SAM=1.858°
+2025-10-09 08:48:14,791 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 08:51:11,621 | INFO | Epoch 107/400 | train_loss=6.034960 | lr=2.587360e-04
+2025-10-09 08:51:17,421 | INFO |   val_loss=10.272887 | PSNR=35.94 dB | SAM=1.836°
+2025-10-09 08:54:02,538 | INFO | Epoch 108/400 | train_loss=6.047300 | lr=2.579603e-04
+2025-10-09 08:54:07,936 | INFO |   val_loss=10.181578 | PSNR=36.03 dB | SAM=1.815°
+2025-10-09 08:56:50,150 | INFO | Epoch 109/400 | train_loss=6.097057 | lr=2.571788e-04
+2025-10-09 08:56:56,342 | INFO |   val_loss=10.085273 | PSNR=36.12 dB | SAM=1.795°
+2025-10-09 08:56:56,532 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 08:59:38,088 | INFO | Epoch 110/400 | train_loss=6.041250 | lr=2.563914e-04
+2025-10-09 08:59:43,534 | INFO |   val_loss=9.995559 | PSNR=36.21 dB | SAM=1.775°
+2025-10-09 09:02:26,423 | INFO | Epoch 111/400 | train_loss=6.034340 | lr=2.555983e-04
+2025-10-09 09:02:31,879 | INFO |   val_loss=9.900844 | PSNR=36.30 dB | SAM=1.756°
+2025-10-09 09:05:28,456 | INFO | Epoch 112/400 | train_loss=6.026595 | lr=2.547994e-04
+2025-10-09 09:05:34,651 | INFO |   val_loss=9.812965 | PSNR=36.38 dB | SAM=1.738°
+2025-10-09 09:05:34,967 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 09:08:24,924 | INFO | Epoch 113/400 | train_loss=6.002797 | lr=2.539949e-04
+2025-10-09 09:08:32,094 | INFO |   val_loss=9.721622 | PSNR=36.47 dB | SAM=1.718°
+2025-10-09 09:11:15,150 | INFO | Epoch 114/400 | train_loss=6.015233 | lr=2.531847e-04
+2025-10-09 09:11:20,454 | INFO |   val_loss=9.633114 | PSNR=36.56 dB | SAM=1.701°
+2025-10-09 09:14:04,298 | INFO | Epoch 115/400 | train_loss=6.077050 | lr=2.523689e-04
+2025-10-09 09:14:09,806 | INFO |   val_loss=9.543985 | PSNR=36.65 dB | SAM=1.682°
+2025-10-09 09:14:09,981 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 09:16:50,116 | INFO | Epoch 116/400 | train_loss=6.026448 | lr=2.515476e-04
+2025-10-09 09:16:55,483 | INFO |   val_loss=9.460867 | PSNR=36.73 dB | SAM=1.665°
+2025-10-09 09:19:36,037 | INFO | Epoch 117/400 | train_loss=6.041559 | lr=2.507209e-04
+2025-10-09 09:19:41,355 | INFO |   val_loss=9.377573 | PSNR=36.81 dB | SAM=1.647°
+2025-10-09 09:22:19,960 | INFO | Epoch 118/400 | train_loss=6.022706 | lr=2.498887e-04
+2025-10-09 09:22:25,363 | INFO |   val_loss=9.292798 | PSNR=36.90 dB | SAM=1.630°
+2025-10-09 09:22:25,736 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 09:25:05,086 | INFO | Epoch 119/400 | train_loss=6.013531 | lr=2.490511e-04
+2025-10-09 09:25:10,377 | INFO |   val_loss=9.206200 | PSNR=36.98 dB | SAM=1.614°
+2025-10-09 09:27:52,131 | INFO | Epoch 120/400 | train_loss=5.965447 | lr=2.482083e-04
+2025-10-09 09:27:57,756 | INFO |   val_loss=9.128456 | PSNR=37.06 dB | SAM=1.599°
+2025-10-09 09:30:45,579 | INFO | Epoch 121/400 | train_loss=5.964896 | lr=2.473601e-04
+2025-10-09 09:30:51,429 | INFO |   val_loss=9.046855 | PSNR=37.15 dB | SAM=1.584°
+2025-10-09 09:33:51,255 | INFO | Epoch 122/400 | train_loss=5.991185 | lr=2.465068e-04
+2025-10-09 09:33:57,175 | INFO |   val_loss=8.969016 | PSNR=37.23 dB | SAM=1.569°
+2025-10-09 09:33:57,567 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 09:36:41,471 | INFO | Epoch 123/400 | train_loss=6.073395 | lr=2.456483e-04
+2025-10-09 09:36:47,228 | INFO |   val_loss=8.895070 | PSNR=37.31 dB | SAM=1.556°
+2025-10-09 09:39:31,082 | INFO | Epoch 124/400 | train_loss=6.005022 | lr=2.447847e-04
+2025-10-09 09:39:36,397 | INFO |   val_loss=8.824222 | PSNR=37.38 dB | SAM=1.542°
+2025-10-09 09:42:18,661 | INFO | Epoch 125/400 | train_loss=5.970368 | lr=2.439161e-04
+2025-10-09 09:42:24,144 | INFO |   val_loss=8.753112 | PSNR=37.46 dB | SAM=1.528°
+2025-10-09 09:45:04,910 | INFO | Epoch 126/400 | train_loss=6.030110 | lr=2.430424e-04
+2025-10-09 09:45:10,390 | INFO |   val_loss=8.679542 | PSNR=37.54 dB | SAM=1.514°
+2025-10-09 09:45:10,587 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 09:47:50,560 | INFO | Epoch 127/400 | train_loss=5.995298 | lr=2.421638e-04
+2025-10-09 09:47:56,399 | INFO |   val_loss=8.610068 | PSNR=37.61 dB | SAM=1.501°
+2025-10-09 09:50:40,666 | INFO | Epoch 128/400 | train_loss=6.031577 | lr=2.412804e-04
+2025-10-09 09:50:46,569 | INFO |   val_loss=8.547709 | PSNR=37.68 dB | SAM=1.489°
+2025-10-09 09:53:29,994 | INFO | Epoch 129/400 | train_loss=5.979545 | lr=2.403921e-04
+2025-10-09 09:53:35,813 | INFO |   val_loss=8.482367 | PSNR=37.75 dB | SAM=1.476°
+2025-10-09 09:56:20,046 | INFO | Epoch 130/400 | train_loss=5.971278 | lr=2.394991e-04
+2025-10-09 09:56:25,535 | INFO |   val_loss=8.417623 | PSNR=37.83 dB | SAM=1.464°
+2025-10-09 09:56:25,727 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 09:59:18,921 | INFO | Epoch 131/400 | train_loss=5.981635 | lr=2.386013e-04
+2025-10-09 09:59:24,994 | INFO |   val_loss=8.359515 | PSNR=37.90 dB | SAM=1.453°
+2025-10-09 10:02:09,915 | INFO | Epoch 132/400 | train_loss=5.956892 | lr=2.376989e-04
+2025-10-09 10:02:15,207 | INFO |   val_loss=8.301947 | PSNR=37.96 dB | SAM=1.442°
+2025-10-09 10:04:57,658 | INFO | Epoch 133/400 | train_loss=5.975505 | lr=2.367919e-04
+2025-10-09 10:05:03,267 | INFO |   val_loss=8.243152 | PSNR=38.03 dB | SAM=1.431°
+2025-10-09 10:07:43,698 | INFO | Epoch 134/400 | train_loss=6.195672 | lr=2.358803e-04
+2025-10-09 10:07:49,292 | INFO |   val_loss=8.187767 | PSNR=38.10 dB | SAM=1.422°
+2025-10-09 10:10:43,577 | INFO | Epoch 135/400 | train_loss=6.976195 | lr=2.349643e-04
+2025-10-09 10:10:48,971 | INFO |   val_loss=8.124101 | PSNR=38.17 dB | SAM=1.410°
+2025-10-09 10:10:49,146 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 10:13:43,638 | INFO | Epoch 136/400 | train_loss=6.361645 | lr=2.340438e-04
+2025-10-09 10:13:48,940 | INFO |   val_loss=8.067459 | PSNR=38.23 dB | SAM=1.400°
+2025-10-09 10:16:42,429 | INFO | Epoch 137/400 | train_loss=6.107346 | lr=2.331190e-04
+2025-10-09 10:16:47,927 | INFO |   val_loss=8.007954 | PSNR=38.31 dB | SAM=1.391°
+2025-10-09 10:19:30,434 | INFO | Epoch 138/400 | train_loss=5.977795 | lr=2.321898e-04
+2025-10-09 10:19:35,745 | INFO |   val_loss=7.953828 | PSNR=38.38 dB | SAM=1.382°
+2025-10-09 10:22:20,062 | INFO | Epoch 139/400 | train_loss=6.027112 | lr=2.312564e-04
+2025-10-09 10:22:26,258 | INFO |   val_loss=7.898505 | PSNR=38.45 dB | SAM=1.374°
+2025-10-09 10:25:08,946 | INFO | Epoch 140/400 | train_loss=6.019257 | lr=2.303188e-04
+2025-10-09 10:25:14,467 | INFO |   val_loss=7.846689 | PSNR=38.52 dB | SAM=1.365°
+2025-10-09 10:27:55,018 | INFO | Epoch 141/400 | train_loss=5.965336 | lr=2.293771e-04
+2025-10-09 10:28:00,299 | INFO |   val_loss=7.793853 | PSNR=38.59 dB | SAM=1.357°
+2025-10-09 10:28:00,467 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 10:30:42,983 | INFO | Epoch 142/400 | train_loss=5.963195 | lr=2.284313e-04
+2025-10-09 10:30:48,388 | INFO |   val_loss=7.743464 | PSNR=38.65 dB | SAM=1.349°
+2025-10-09 10:33:33,643 | INFO | Epoch 143/400 | train_loss=5.963636 | lr=2.274815e-04
+2025-10-09 10:33:39,018 | INFO |   val_loss=7.693358 | PSNR=38.72 dB | SAM=1.341°
+2025-10-09 10:36:20,499 | INFO | Epoch 144/400 | train_loss=5.917919 | lr=2.265278e-04
+2025-10-09 10:36:26,151 | INFO |   val_loss=7.643131 | PSNR=38.79 dB | SAM=1.333°
+2025-10-09 10:39:07,182 | INFO | Epoch 145/400 | train_loss=5.910047 | lr=2.255701e-04
+2025-10-09 10:39:13,467 | INFO |   val_loss=7.594037 | PSNR=38.85 dB | SAM=1.325°
+2025-10-09 10:42:01,813 | INFO | Epoch 146/400 | train_loss=5.895873 | lr=2.246086e-04
+2025-10-09 10:42:07,754 | INFO |   val_loss=7.544291 | PSNR=38.92 dB | SAM=1.318°
+2025-10-09 10:45:08,091 | INFO | Epoch 147/400 | train_loss=5.991109 | lr=2.236434e-04
+2025-10-09 10:45:13,969 | INFO |   val_loss=7.498032 | PSNR=38.98 dB | SAM=1.310°
+2025-10-09 10:48:15,305 | INFO | Epoch 148/400 | train_loss=6.042269 | lr=2.226744e-04
+2025-10-09 10:48:22,826 | INFO |   val_loss=7.450661 | PSNR=39.05 dB | SAM=1.303°
+2025-10-09 10:48:23,126 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 10:51:26,261 | INFO | Epoch 149/400 | train_loss=6.001016 | lr=2.217018e-04
+2025-10-09 10:51:32,345 | INFO |   val_loss=7.398659 | PSNR=39.11 dB | SAM=1.296°
+2025-10-09 10:54:37,807 | INFO | Epoch 150/400 | train_loss=5.948005 | lr=2.207256e-04
+2025-10-09 10:54:44,071 | INFO |   val_loss=7.351200 | PSNR=39.18 dB | SAM=1.289°
+2025-10-09 10:57:42,410 | INFO | Epoch 151/400 | train_loss=5.940775 | lr=2.197459e-04
+2025-10-09 10:57:48,138 | INFO |   val_loss=7.305336 | PSNR=39.24 dB | SAM=1.282°
+2025-10-09 11:00:32,351 | INFO | Epoch 152/400 | train_loss=5.962509 | lr=2.187627e-04
+2025-10-09 11:00:38,783 | INFO |   val_loss=7.258986 | PSNR=39.31 dB | SAM=1.276°
+2025-10-09 11:03:21,942 | INFO | Epoch 153/400 | train_loss=5.995927 | lr=2.177762e-04
+2025-10-09 11:03:27,621 | INFO |   val_loss=7.218740 | PSNR=39.37 dB | SAM=1.270°
+2025-10-09 11:06:13,016 | INFO | Epoch 154/400 | train_loss=5.930995 | lr=2.167862e-04
+2025-10-09 11:06:18,467 | INFO |   val_loss=7.177409 | PSNR=39.42 dB | SAM=1.265°
+2025-10-09 11:09:00,982 | INFO | Epoch 155/400 | train_loss=5.871978 | lr=2.157930e-04
+2025-10-09 11:09:06,453 | INFO |   val_loss=7.136606 | PSNR=39.48 dB | SAM=1.259°
+2025-10-09 11:11:52,070 | INFO | Epoch 156/400 | train_loss=5.886099 | lr=2.147966e-04
+2025-10-09 11:11:57,545 | INFO |   val_loss=7.093642 | PSNR=39.54 dB | SAM=1.253°
+2025-10-09 11:14:45,600 | INFO | Epoch 157/400 | train_loss=5.921831 | lr=2.137971e-04
+2025-10-09 11:14:51,793 | INFO |   val_loss=7.054861 | PSNR=39.60 dB | SAM=1.247°
+2025-10-09 11:14:52,002 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 11:17:45,101 | INFO | Epoch 158/400 | train_loss=5.930142 | lr=2.127944e-04
+2025-10-09 11:17:50,836 | INFO |   val_loss=7.014401 | PSNR=39.66 dB | SAM=1.241°
+2025-10-09 11:20:32,355 | INFO | Epoch 159/400 | train_loss=5.866377 | lr=2.117888e-04
+2025-10-09 11:20:37,742 | INFO |   val_loss=6.974083 | PSNR=39.72 dB | SAM=1.236°
+2025-10-09 11:23:19,175 | INFO | Epoch 160/400 | train_loss=5.882242 | lr=2.107801e-04
+2025-10-09 11:23:24,649 | INFO |   val_loss=6.937858 | PSNR=39.77 dB | SAM=1.231°
+2025-10-09 11:26:06,467 | INFO | Epoch 161/400 | train_loss=5.889476 | lr=2.097686e-04
+2025-10-09 11:26:12,199 | INFO |   val_loss=6.900690 | PSNR=39.83 dB | SAM=1.226°
+2025-10-09 11:28:53,203 | INFO | Epoch 162/400 | train_loss=5.870521 | lr=2.087542e-04
+2025-10-09 11:28:58,454 | INFO |   val_loss=6.865940 | PSNR=39.88 dB | SAM=1.220°
+2025-10-09 11:31:40,371 | INFO | Epoch 163/400 | train_loss=5.910787 | lr=2.077371e-04
+2025-10-09 11:31:45,864 | INFO |   val_loss=6.831356 | PSNR=39.93 dB | SAM=1.215°
+2025-10-09 11:34:26,594 | INFO | Epoch 164/400 | train_loss=5.908045 | lr=2.067173e-04
+2025-10-09 11:34:32,136 | INFO |   val_loss=6.795120 | PSNR=39.97 dB | SAM=1.209°
+2025-10-09 11:37:13,821 | INFO | Epoch 165/400 | train_loss=5.909958 | lr=2.056948e-04
+2025-10-09 11:37:19,410 | INFO |   val_loss=6.761739 | PSNR=40.03 dB | SAM=1.204°
+2025-10-09 11:40:00,874 | INFO | Epoch 166/400 | train_loss=5.875984 | lr=2.046698e-04
+2025-10-09 11:40:06,581 | INFO |   val_loss=6.730761 | PSNR=40.07 dB | SAM=1.199°
+2025-10-09 11:42:48,423 | INFO | Epoch 167/400 | train_loss=5.929166 | lr=2.036422e-04
+2025-10-09 11:42:53,939 | INFO |   val_loss=6.698022 | PSNR=40.12 dB | SAM=1.194°
+2025-10-09 11:42:54,118 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 11:45:40,807 | INFO | Epoch 168/400 | train_loss=5.941563 | lr=2.026122e-04
+2025-10-09 11:45:46,453 | INFO |   val_loss=6.667756 | PSNR=40.17 dB | SAM=1.189°
+2025-10-09 11:48:26,652 | INFO | Epoch 169/400 | train_loss=5.917784 | lr=2.015799e-04
+2025-10-09 11:48:32,750 | INFO |   val_loss=6.640827 | PSNR=40.21 dB | SAM=1.185°
+2025-10-09 11:51:22,375 | INFO | Epoch 170/400 | train_loss=5.994165 | lr=2.005452e-04
+2025-10-09 11:51:27,864 | INFO |   val_loss=6.613326 | PSNR=40.26 dB | SAM=1.180°
+2025-10-09 11:54:09,033 | INFO | Epoch 171/400 | train_loss=5.889733 | lr=1.995082e-04
+2025-10-09 11:54:14,625 | INFO |   val_loss=6.582058 | PSNR=40.30 dB | SAM=1.176°
+2025-10-09 11:56:58,901 | INFO | Epoch 172/400 | train_loss=5.837842 | lr=1.984691e-04
+2025-10-09 11:57:05,085 | INFO |   val_loss=6.555997 | PSNR=40.35 dB | SAM=1.171°
+2025-10-09 11:59:52,872 | INFO | Epoch 173/400 | train_loss=5.841759 | lr=1.974279e-04
+2025-10-09 11:59:58,405 | INFO |   val_loss=6.530866 | PSNR=40.39 dB | SAM=1.167°
+2025-10-09 12:02:48,385 | INFO | Epoch 174/400 | train_loss=5.855616 | lr=1.963846e-04
+2025-10-09 12:02:53,891 | INFO |   val_loss=6.504675 | PSNR=40.44 dB | SAM=1.163°
+2025-10-09 12:05:34,260 | INFO | Epoch 175/400 | train_loss=5.871222 | lr=1.953393e-04
+2025-10-09 12:05:39,661 | INFO |   val_loss=6.480775 | PSNR=40.48 dB | SAM=1.159°
+2025-10-09 12:08:22,252 | INFO | Epoch 176/400 | train_loss=5.855671 | lr=1.942921e-04
+2025-10-09 12:08:28,025 | INFO |   val_loss=6.458428 | PSNR=40.52 dB | SAM=1.155°
+2025-10-09 12:11:11,358 | INFO | Epoch 177/400 | train_loss=5.872770 | lr=1.932431e-04
+2025-10-09 12:11:16,666 | INFO |   val_loss=6.434871 | PSNR=40.56 dB | SAM=1.151°
+2025-10-09 12:13:55,938 | INFO | Epoch 178/400 | train_loss=5.856425 | lr=1.921923e-04
+2025-10-09 12:14:01,571 | INFO |   val_loss=6.409277 | PSNR=40.60 dB | SAM=1.147°
+2025-10-09 12:16:40,176 | INFO | Epoch 179/400 | train_loss=5.824630 | lr=1.911397e-04
+2025-10-09 12:16:45,773 | INFO |   val_loss=6.387815 | PSNR=40.64 dB | SAM=1.143°
+2025-10-09 12:16:45,973 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 12:19:29,280 | INFO | Epoch 180/400 | train_loss=5.819392 | lr=1.900855e-04
+2025-10-09 12:19:35,426 | INFO |   val_loss=6.363279 | PSNR=40.69 dB | SAM=1.139°
+2025-10-09 12:22:17,140 | INFO | Epoch 181/400 | train_loss=5.834964 | lr=1.890297e-04
+2025-10-09 12:22:22,736 | INFO |   val_loss=6.341463 | PSNR=40.73 dB | SAM=1.135°
+2025-10-09 12:25:02,864 | INFO | Epoch 182/400 | train_loss=5.810382 | lr=1.879724e-04
+2025-10-09 12:25:08,247 | INFO |   val_loss=6.319049 | PSNR=40.77 dB | SAM=1.130°
+2025-10-09 12:27:51,654 | INFO | Epoch 183/400 | train_loss=5.804915 | lr=1.869136e-04
+2025-10-09 12:27:57,090 | INFO |   val_loss=6.296185 | PSNR=40.81 dB | SAM=1.126°
+2025-10-09 12:30:40,901 | INFO | Epoch 184/400 | train_loss=5.804818 | lr=1.858535e-04
+2025-10-09 12:30:46,773 | INFO |   val_loss=6.276469 | PSNR=40.85 dB | SAM=1.123°
+2025-10-09 12:33:26,405 | INFO | Epoch 185/400 | train_loss=5.815626 | lr=1.847920e-04
+2025-10-09 12:33:31,944 | INFO |   val_loss=6.258158 | PSNR=40.88 dB | SAM=1.119°
+2025-10-09 12:36:14,005 | INFO | Epoch 186/400 | train_loss=5.788550 | lr=1.837293e-04
+2025-10-09 12:36:20,152 | INFO |   val_loss=6.243303 | PSNR=40.92 dB | SAM=1.116°
+2025-10-09 12:39:03,105 | INFO | Epoch 187/400 | train_loss=5.810169 | lr=1.826654e-04
+2025-10-09 12:39:08,387 | INFO |   val_loss=6.227331 | PSNR=40.95 dB | SAM=1.112°
+2025-10-09 12:41:50,347 | INFO | Epoch 188/400 | train_loss=5.830162 | lr=1.816004e-04
+2025-10-09 12:41:56,020 | INFO |   val_loss=6.213040 | PSNR=40.99 dB | SAM=1.109°
+2025-10-09 12:44:36,515 | INFO | Epoch 189/400 | train_loss=5.826003 | lr=1.805343e-04
+2025-10-09 12:44:42,398 | INFO |   val_loss=6.194793 | PSNR=41.03 dB | SAM=1.106°
+2025-10-09 12:47:24,263 | INFO | Epoch 190/400 | train_loss=5.799945 | lr=1.794672e-04
+2025-10-09 12:47:29,863 | INFO |   val_loss=6.180180 | PSNR=41.06 dB | SAM=1.103°
+2025-10-09 12:50:08,782 | INFO | Epoch 191/400 | train_loss=5.840759 | lr=1.783993e-04
+2025-10-09 12:50:15,615 | INFO |   val_loss=6.163463 | PSNR=41.10 dB | SAM=1.100°
+2025-10-09 12:53:01,912 | INFO | Epoch 192/400 | train_loss=5.796172 | lr=1.773304e-04
+2025-10-09 12:53:07,665 | INFO |   val_loss=6.147729 | PSNR=41.13 dB | SAM=1.097°
+2025-10-09 12:55:51,290 | INFO | Epoch 193/400 | train_loss=5.794577 | lr=1.762608e-04
+2025-10-09 12:55:56,613 | INFO |   val_loss=6.134757 | PSNR=41.17 dB | SAM=1.094°
+2025-10-09 12:58:37,155 | INFO | Epoch 194/400 | train_loss=5.802914 | lr=1.751905e-04
+2025-10-09 12:58:42,937 | INFO |   val_loss=6.120333 | PSNR=41.21 dB | SAM=1.091°
+2025-10-09 12:58:43,186 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 13:01:26,586 | INFO | Epoch 195/400 | train_loss=5.780275 | lr=1.741196e-04
+2025-10-09 13:01:32,273 | INFO |   val_loss=6.104232 | PSNR=41.25 dB | SAM=1.088°
+2025-10-09 13:04:15,482 | INFO | Epoch 196/400 | train_loss=5.771655 | lr=1.730480e-04
+2025-10-09 13:04:20,953 | INFO |   val_loss=6.088501 | PSNR=41.29 dB | SAM=1.085°
+2025-10-09 13:07:03,363 | INFO | Epoch 197/400 | train_loss=5.805779 | lr=1.719760e-04
+2025-10-09 13:07:09,038 | INFO |   val_loss=6.075089 | PSNR=41.32 dB | SAM=1.082°
+2025-10-09 13:09:49,840 | INFO | Epoch 198/400 | train_loss=5.795176 | lr=1.709035e-04
+2025-10-09 13:09:55,145 | INFO |   val_loss=6.065514 | PSNR=41.35 dB | SAM=1.079°
+2025-10-09 13:12:35,949 | INFO | Epoch 199/400 | train_loss=5.785683 | lr=1.698307e-04
+2025-10-09 13:12:41,896 | INFO |   val_loss=6.056723 | PSNR=41.38 dB | SAM=1.077°
+2025-10-09 13:15:24,995 | INFO | Epoch 200/400 | train_loss=5.773506 | lr=1.687575e-04
+2025-10-09 13:15:30,612 | INFO |   val_loss=6.047972 | PSNR=41.41 dB | SAM=1.074°
+2025-10-09 13:18:13,093 | INFO | Epoch 201/400 | train_loss=5.769216 | lr=1.676841e-04
+2025-10-09 13:18:18,344 | INFO |   val_loss=6.039370 | PSNR=41.43 dB | SAM=1.072°
+2025-10-09 13:21:00,480 | INFO | Epoch 202/400 | train_loss=5.773461 | lr=1.666105e-04
+2025-10-09 13:21:05,996 | INFO |   val_loss=6.031862 | PSNR=41.46 dB | SAM=1.070°
+2025-10-09 13:23:52,607 | INFO | Epoch 203/400 | train_loss=5.774450 | lr=1.655369e-04
+2025-10-09 13:23:58,051 | INFO |   val_loss=6.018614 | PSNR=41.50 dB | SAM=1.067°
+2025-10-09 13:26:39,162 | INFO | Epoch 204/400 | train_loss=5.792515 | lr=1.644631e-04
+2025-10-09 13:26:45,036 | INFO |   val_loss=6.007535 | PSNR=41.53 dB | SAM=1.065°
+2025-10-09 13:29:29,195 | INFO | Epoch 205/400 | train_loss=5.767798 | lr=1.633895e-04
+2025-10-09 13:29:34,537 | INFO |   val_loss=6.001257 | PSNR=41.56 dB | SAM=1.063°
+2025-10-09 13:32:14,295 | INFO | Epoch 206/400 | train_loss=5.758572 | lr=1.623159e-04
+2025-10-09 13:32:20,379 | INFO |   val_loss=5.999277 | PSNR=41.57 dB | SAM=1.062°
+2025-10-09 13:35:03,823 | INFO | Epoch 207/400 | train_loss=5.792819 | lr=1.612425e-04
+2025-10-09 13:35:09,971 | INFO |   val_loss=5.993248 | PSNR=41.60 dB | SAM=1.060°
+2025-10-09 13:37:52,633 | INFO | Epoch 208/400 | train_loss=5.839675 | lr=1.601693e-04
+2025-10-09 13:37:58,447 | INFO |   val_loss=5.993147 | PSNR=41.62 dB | SAM=1.058°
+2025-10-09 13:40:40,504 | INFO | Epoch 209/400 | train_loss=5.827889 | lr=1.590965e-04
+2025-10-09 13:40:46,221 | INFO |   val_loss=5.985910 | PSNR=41.65 dB | SAM=1.056°
+2025-10-09 13:43:29,538 | INFO | Epoch 210/400 | train_loss=5.851718 | lr=1.580240e-04
+2025-10-09 13:43:35,383 | INFO |   val_loss=5.980883 | PSNR=41.68 dB | SAM=1.054°
+2025-10-09 13:46:18,620 | INFO | Epoch 211/400 | train_loss=5.782882 | lr=1.569520e-04
+2025-10-09 13:46:24,176 | INFO |   val_loss=5.981236 | PSNR=41.70 dB | SAM=1.053°
+2025-10-09 13:49:02,956 | INFO | Epoch 212/400 | train_loss=5.760496 | lr=1.558804e-04
+2025-10-09 13:49:08,598 | INFO |   val_loss=5.981210 | PSNR=41.71 dB | SAM=1.052°
+2025-10-09 13:51:53,993 | INFO | Epoch 213/400 | train_loss=5.733358 | lr=1.548095e-04
+2025-10-09 13:51:59,637 | INFO |   val_loss=5.976454 | PSNR=41.74 dB | SAM=1.050°
+2025-10-09 13:54:42,431 | INFO | Epoch 214/400 | train_loss=5.755605 | lr=1.537392e-04
+2025-10-09 13:54:48,235 | INFO |   val_loss=5.976281 | PSNR=41.77 dB | SAM=1.049°
+2025-10-09 13:57:33,467 | INFO | Epoch 215/400 | train_loss=5.746595 | lr=1.526696e-04
+2025-10-09 13:57:38,948 | INFO |   val_loss=5.974030 | PSNR=41.79 dB | SAM=1.048°
+2025-10-09 14:00:19,413 | INFO | Epoch 216/400 | train_loss=5.750508 | lr=1.516007e-04
+2025-10-09 14:00:24,975 | INFO |   val_loss=5.971130 | PSNR=41.82 dB | SAM=1.046°
+2025-10-09 14:03:06,944 | INFO | Epoch 217/400 | train_loss=5.718572 | lr=1.505328e-04
+2025-10-09 14:03:12,793 | INFO |   val_loss=5.971120 | PSNR=41.84 dB | SAM=1.044°
+2025-10-09 14:05:57,255 | INFO | Epoch 218/400 | train_loss=5.727479 | lr=1.494657e-04
+2025-10-09 14:06:02,966 | INFO |   val_loss=5.967777 | PSNR=41.87 dB | SAM=1.042°
+2025-10-09 14:08:50,005 | INFO | Epoch 219/400 | train_loss=5.724707 | lr=1.483996e-04
+2025-10-09 14:08:56,553 | INFO |   val_loss=5.964649 | PSNR=41.89 dB | SAM=1.041°
+2025-10-09 14:11:35,799 | INFO | Epoch 220/400 | train_loss=5.730480 | lr=1.473346e-04
+2025-10-09 14:11:41,753 | INFO |   val_loss=5.960889 | PSNR=41.92 dB | SAM=1.040°
+2025-10-09 14:11:41,962 | INFO |   Saved best checkpoint to checkpoints/god_run/mamba_tiny_uv_best.pt
+2025-10-09 14:14:26,871 | INFO | Epoch 221/400 | train_loss=5.739839 | lr=1.462707e-04
+2025-10-09 14:14:32,203 | INFO |   val_loss=5.962949 | PSNR=41.94 dB | SAM=1.039°
+2025-10-09 14:17:13,123 | INFO | Epoch 222/400 | train_loss=5.728906 | lr=1.452080e-04
+2025-10-09 14:17:18,596 | INFO |   val_loss=5.959908 | PSNR=41.97 dB | SAM=1.037°
+2025-10-09 14:19:59,967 | INFO | Epoch 223/400 | train_loss=5.729147 | lr=1.441465e-04
+2025-10-09 14:20:05,409 | INFO |   val_loss=5.961571 | PSNR=41.99 dB | SAM=1.035°
+2025-10-09 14:22:48,799 | INFO | Epoch 224/400 | train_loss=5.762154 | lr=1.430864e-04
+2025-10-09 14:22:54,126 | INFO |   val_loss=5.962127 | PSNR=42.01 dB | SAM=1.033°
+2025-10-09 14:25:34,549 | INFO | Epoch 225/400 | train_loss=5.738338 | lr=1.420276e-04
+2025-10-09 14:25:40,016 | INFO |   val_loss=5.966061 | PSNR=42.02 dB | SAM=1.033°
+2025-10-09 14:28:20,775 | INFO | Epoch 226/400 | train_loss=5.716145 | lr=1.409703e-04
+2025-10-09 14:28:26,268 | INFO |   val_loss=5.966160 | PSNR=42.04 dB | SAM=1.031°
+2025-10-09 14:31:06,283 | INFO | Epoch 227/400 | train_loss=5.730514 | lr=1.399145e-04
+2025-10-09 14:31:11,655 | INFO |   val_loss=5.971129 | PSNR=42.05 dB | SAM=1.030°
+2025-10-09 14:33:51,234 | INFO | Epoch 228/400 | train_loss=5.721756 | lr=1.388603e-04
+2025-10-09 14:33:56,729 | INFO |   val_loss=5.975963 | PSNR=42.07 dB | SAM=1.029°
+2025-10-09 14:36:44,554 | INFO | Epoch 229/400 | train_loss=5.726573 | lr=1.378077e-04
+2025-10-09 14:36:50,129 | INFO |   val_loss=5.977631 | PSNR=42.09 dB | SAM=1.028°
+2025-10-09 14:39:41,171 | INFO | Epoch 230/400 | train_loss=5.726992 | lr=1.367569e-04
+2025-10-09 14:39:46,878 | INFO |   val_loss=5.980052 | PSNR=42.11 dB | SAM=1.027°
+2025-10-09 14:42:33,570 | INFO | Epoch 231/400 | train_loss=5.711623 | lr=1.357079e-04
+2025-10-09 14:42:39,097 | INFO |   val_loss=5.984784 | PSNR=42.12 dB | SAM=1.026°
+2025-10-09 14:45:21,739 | INFO | Epoch 232/400 | train_loss=5.690461 | lr=1.346607e-04
+2025-10-09 14:45:27,401 | INFO |   val_loss=5.990044 | PSNR=42.14 dB | SAM=1.025°
+2025-10-09 14:48:12,822 | INFO | Epoch 233/400 | train_loss=5.713144 | lr=1.336154e-04
+2025-10-09 14:48:18,357 | INFO |   val_loss=5.996332 | PSNR=42.15 dB | SAM=1.024°
+2025-10-09 14:50:57,753 | INFO | Epoch 234/400 | train_loss=5.702748 | lr=1.325721e-04
+2025-10-09 14:51:03,275 | INFO |   val_loss=6.000533 | PSNR=42.17 dB | SAM=1.023°
+2025-10-09 14:53:44,098 | INFO | Epoch 235/400 | train_loss=5.690076 | lr=1.315309e-04
+2025-10-09 14:53:49,998 | INFO |   val_loss=6.013225 | PSNR=42.16 dB | SAM=1.022°
+2025-10-09 14:56:36,658 | INFO | Epoch 236/400 | train_loss=5.718641 | lr=1.304918e-04
+2025-10-09 14:56:42,198 | INFO |   val_loss=6.023450 | PSNR=42.17 dB | SAM=1.022°
+2025-10-09 14:59:23,020 | INFO | Epoch 237/400 | train_loss=5.709493 | lr=1.294548e-04
+2025-10-09 14:59:28,572 | INFO |   val_loss=6.031866 | PSNR=42.17 dB | SAM=1.022°
+2025-10-09 15:02:09,410 | INFO | Epoch 238/400 | train_loss=5.714010 | lr=1.284201e-04
+2025-10-09 15:02:14,980 | INFO |   val_loss=6.039636 | PSNR=42.18 dB | SAM=1.021°
+2025-10-09 15:04:55,021 | INFO | Epoch 239/400 | train_loss=5.698228 | lr=1.273878e-04
+2025-10-09 15:05:01,051 | INFO |   val_loss=6.045706 | PSNR=42.19 dB | SAM=1.021°
+2025-10-09 15:07:40,924 | INFO | Epoch 240/400 | train_loss=5.699013 | lr=1.263578e-04
+2025-10-09 15:07:46,619 | INFO |   val_loss=6.051802 | PSNR=42.21 dB | SAM=1.021°
+2025-10-09 15:10:28,112 | INFO | Epoch 241/400 | train_loss=5.732094 | lr=1.253302e-04
+2025-10-09 15:10:33,492 | INFO |   val_loss=6.062855 | PSNR=42.21 dB | SAM=1.021°
+2025-10-09 15:13:17,077 | INFO | Epoch 242/400 | train_loss=5.709925 | lr=1.243052e-04
+2025-10-09 15:13:22,672 | INFO |   val_loss=6.071041 | PSNR=42.22 dB | SAM=1.021°
+2025-10-09 15:16:02,824 | INFO | Epoch 243/400 | train_loss=5.707675 | lr=1.232827e-04
+2025-10-09 15:16:08,231 | INFO |   val_loss=6.078218 | PSNR=42.23 dB | SAM=1.021°
+2025-10-09 15:18:50,613 | INFO | Epoch 244/400 | train_loss=5.703083 | lr=1.222629e-04
+2025-10-09 15:18:56,272 | INFO |   val_loss=6.086947 | PSNR=42.24 dB | SAM=1.022°
+2025-10-09 15:21:39,087 | INFO | Epoch 245/400 | train_loss=5.736592 | lr=1.212458e-04
+2025-10-09 15:21:44,703 | INFO |   val_loss=6.093032 | PSNR=42.25 dB | SAM=1.022°
+2025-10-09 15:24:27,731 | INFO | Epoch 246/400 | train_loss=5.714859 | lr=1.202314e-04
+2025-10-09 15:24:33,117 | INFO |   val_loss=6.101114 | PSNR=42.26 dB | SAM=1.021°
+2025-10-09 15:27:17,821 | INFO | Epoch 247/400 | train_loss=5.703330 | lr=1.192199e-04
+2025-10-09 15:27:23,537 | INFO |   val_loss=6.110555 | PSNR=42.27 dB | SAM=1.022°
+2025-10-09 15:30:05,542 | INFO | Epoch 248/400 | train_loss=5.690743 | lr=1.182112e-04
+2025-10-09 15:30:11,534 | INFO |   val_loss=6.122421 | PSNR=42.27 dB | SAM=1.022°
+2025-10-09 15:32:53,034 | INFO | Epoch 249/400 | train_loss=5.690219 | lr=1.172056e-04
+2025-10-09 15:32:58,852 | INFO |   val_loss=6.129108 | PSNR=42.29 dB | SAM=1.021°
+2025-10-09 15:35:40,802 | INFO | Epoch 250/400 | train_loss=5.691741 | lr=1.162029e-04
+2025-10-09 15:35:46,169 | INFO |   val_loss=6.141075 | PSNR=42.29 dB | SAM=1.022°
+2025-10-09 15:35:46,175 | INFO | Early stopping triggered due to SAM plateau

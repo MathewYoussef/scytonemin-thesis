@@ -1,0 +1,25 @@
+2025-10-09 00:17:10,658 | INFO | Audit log path: /mnt/Act_of_God/logs/god_run/auditing_manifest.log
+2025-10-09 00:17:10,850 | INFO | Using device: cuda
+2025-10-09 00:17:11,730 | INFO | Loading initial weights from /mnt/Act_of_God/checkpoints/prod/Track_H_fold_02/mamba_tiny_uv_best.pt
+2025-10-09 00:17:16,500 | INFO | Train manifest: /mnt/Act_of_God/data/spectra_for_fold/manifest_train.csv
+2025-10-09 00:17:16,500 | INFO | Training spectra: 10350 | batches per epoch: 17
+2025-10-09 00:17:16,500 | INFO | Validation manifest: /mnt/Act_of_God/data/validation_panel.csv
+2025-10-09 00:17:16,500 | WARNING | Validation loader not provided; skipping validation metrics
+2025-10-09 00:20:11,848 | INFO | Epoch 1/400 | train_loss=26.940303 | lr=3.000000e-10
+2025-10-09 00:22:54,787 | INFO | Epoch 2/400 | train_loss=26.419424 | lr=6.000024e-05
+2025-10-09 00:25:39,626 | INFO | Epoch 3/400 | train_loss=14.372466 | lr=1.200002e-04
+2025-10-09 00:28:22,727 | INFO | Epoch 4/400 | train_loss=8.885617 | lr=1.800001e-04
+2025-10-09 00:31:04,058 | INFO | Epoch 5/400 | train_loss=8.093811 | lr=2.400001e-04
+2025-10-09 00:34:01,284 | INFO | Epoch 6/400 | train_loss=11.394207 | lr=3.000000e-04
+2025-10-09 00:36:46,292 | INFO | Epoch 7/400 | train_loss=9.865008 | lr=2.999957e-04
+2025-10-09 00:39:29,011 | INFO | Epoch 8/400 | train_loss=7.179376 | lr=2.999829e-04
+2025-10-09 00:42:10,749 | INFO | Epoch 9/400 | train_loss=6.941894 | lr=2.999616e-04
+2025-10-09 00:44:53,400 | INFO | Epoch 10/400 | train_loss=6.841464 | lr=2.999317e-04
+2025-10-09 00:47:36,374 | INFO | Epoch 11/400 | train_loss=6.716607 | lr=2.998933e-04
+2025-10-09 00:50:20,787 | INFO | Epoch 12/400 | train_loss=6.796669 | lr=2.998463e-04
+2025-10-09 00:53:04,654 | INFO | Epoch 13/400 | train_loss=6.676291 | lr=2.997908e-04
+2025-10-09 00:55:50,653 | INFO | Epoch 14/400 | train_loss=6.514807 | lr=2.997268e-04
+2025-10-09 00:58:45,246 | INFO | Epoch 15/400 | train_loss=6.696485 | lr=2.996543e-04
+2025-10-09 01:01:41,441 | INFO | Epoch 16/400 | train_loss=6.771633 | lr=2.995732e-04
+2025-10-09 01:04:36,363 | INFO | Epoch 17/400 | train_loss=6.432949 | lr=2.994837e-04
+2025-10-09 01:07:36,482 | INFO | Epoch 18/400 | train_loss=6.461157 | lr=2.993856e-04

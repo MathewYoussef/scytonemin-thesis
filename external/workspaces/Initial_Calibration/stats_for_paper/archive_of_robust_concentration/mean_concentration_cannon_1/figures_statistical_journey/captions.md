@@ -1,0 +1,9 @@
+# Statistical Journey Figure Captions
+
+1. **dose_overview.png** — UVA vs. UVB pairing for each dose, annotated with exact coordinate values and the highest-dose UVB dip that motivates tracking both axes during the robust-mean analysis.
+2. **replicate_stripplots.png** — Jittered replicate concentrations per dose (Chromatogram and DAD totals/reduced) with overlaid trimmed means ± bootstrap CIs, numerically annotated so the stabilised signal after collapsing replicates is explicit.
+3. **dose_mean_trends.png** — Dose-level trimmed means plotted against UVA with weighted linear and quadratic fits, annotated with slope estimates, 95 % CIs, and R² to highlight the “mostly increasing with a late dip” pattern revealed after aggregation.
+4. **sequential_deltas.png** — Bootstrap-estimated dose-to-dose deltas for totals and reduced pools, labelled with delta estimates and interval bounds; the captions call out the `+ + + − +` signature for totals and the `+ − + + −` signature for reduced fractions.
+5. **chrom_dad_concordance.png** — Chromatogram vs. DAD trimmed means with Deming regression lines for total, oxidised, and reduced fractions, annotated with correlation coefficients and slope confidence intervals to demonstrate assay agreement post-averaging.
+6. **hypothesis_synthesis.png** — Side-by-side comparison of replicate-level Kendall τ (null leaning) and dose-level slope estimates with 95 % CIs (exploratory signal), annotated to summarise the journey from the initial hypothesis to the robust-mean insight.
+7. **dose_mean_stripplot.png** *(project root)* — Faceted comparison of replicate-level points versus 20 % trimmed means ± bootstrap CIs, with each panel annotated by the weighted UVA slope that originates from `dose_trend_stats.csv`; this provides a compact alternative to `replicate_stripplots.png` when only the trimmed-mean narrative is needed.

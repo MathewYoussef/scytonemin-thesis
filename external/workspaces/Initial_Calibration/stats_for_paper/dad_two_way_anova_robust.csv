@@ -1,0 +1,9 @@
+dataset,variant,measurement,term,sum_sq,df,F,PR(>F)
+dad,raw,predicted_total_mg_per_gDW,C(p_uva_mw_cm2),0.024949679764510544,5.0,0.0159058530695081,0.9006887983873187
+dad,raw,predicted_total_mg_per_gDW,C(p_uvb_mw_cm2),3.066467286170059e-05,5.0,1.9549260173532758e-05,0.9965087483320243
+dad,raw,predicted_total_mg_per_gDW,C(p_uva_mw_cm2):C(p_uvb_mw_cm2),11.25106272716637,25.0,1.4345494796184464,0.247958069959902
+dad,raw,predicted_total_mg_per_gDW,Residual,7.529207163319674,24.0,,
+dad,delta,predicted_total_mg_per_gDW_delta,C(p_uva_mw_cm2),0.008955009707363437,5.0,0.005708973821938587,0.9403972570285466
+dad,delta,predicted_total_mg_per_gDW_delta,C(p_uvb_mw_cm2),0.005631261463439293,5.0,0.003590026736970655,0.9527180144465832
+dad,delta,predicted_total_mg_per_gDW_delta,C(p_uva_mw_cm2):C(p_uvb_mw_cm2),11.251062727166355,25.0,1.4345494796184444,0.24795806995990213
+dad,delta,predicted_total_mg_per_gDW_delta,Residual,7.529207163319674,24.0,,

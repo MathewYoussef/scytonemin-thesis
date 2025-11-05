@@ -1,0 +1,29 @@
+{
+  "form": "oxidized",
+  "weighting": "1/x",
+  "intercept_mode": "free",
+  "slope": 1.1040477788897646e-05,
+  "intercept": -0.016120619121894532,
+  "slope_se": 6.1451239394069e-07,
+  "intercept_se": 0.007751927758095416,
+  "r_squared": 0.9847461368324621,
+  "r_squared_weighted": 0.9847461368324621,
+  "rss": 0.014300911154302497,
+  "aic": -39.35339523002141,
+  "bic": -39.46157493191079,
+  "degrees_of_freedom": 5,
+  "intercept_pvalue_normal": 0.037565669466949725,
+  "max_abs_rel_residual": 0.1417169403267413,
+  "residual_poly_r2": 0.3715249675142015,
+  "qc_pass": true,
+  "cov_intercept_slope": -3.246017512187827e-09,
+  "blank_stats": {
+    "n_blank": 0,
+    "mean_blank_area": NaN,
+    "std_blank_area": NaN
+  },
+  "detection_limits": {
+    "LOD_mg_ml": NaN,
+    "LOQ_mg_ml": NaN
+  }
+}

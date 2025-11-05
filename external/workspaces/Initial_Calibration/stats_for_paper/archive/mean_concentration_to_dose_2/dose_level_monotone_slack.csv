@@ -1,0 +1,7 @@
+metric,slack_allowance,prob_monotone_leq1,prob_violate_more
+chrom_total,<=1 negative step,0.349,0.651
+chrom_oxidized,<=1 negative step,0.330,0.670
+chrom_reduced,<=1 negative step,0.226,0.774
+dad_total,<=1 negative step,0.403,0.597
+dad_oxidized,<=1 negative step,0.475,0.525
+dad_reduced,<=1 negative step,0.210,0.790

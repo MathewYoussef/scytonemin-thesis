@@ -1,0 +1,8 @@
+sequence_id,sample_name,sample_category,standard_level,standard_concentration_mg_ml,retention_time_min,area,response,primary_flags,calculated_conc_reported,percent_deviation,source_file,type,known_concentration_mg_ml,fitted_concentration_mg_ml,residual_mg_ml,relative_residual
+1,Youssef Pig 29_09_25 Scyt Std7,standard,7.0,0.023,1.1,1969.0,1968.81,MM,,,Yousseff Red Scyt 29_09_25.txt,standard,0.023,0.025762088062759474,-0.002762088062759474,-0.12009078533736844
+2,Youssef Pig 29_09_25 Scyt Std6,standard,6.0,0.047,1.1,2757.0,2756.937,MM,,,Yousseff Red Scyt 29_09_25.txt,standard,0.047,0.04196555062642395,0.0050344493735760484,0.10711594411863933
+3,Youssef Pig 29_09_25 Scyt Std5,standard,5.0,0.095,1.11,5198.0,5198.336,MM,,,Yousseff Red Scyt 29_09_25.txt,standard,0.095,0.09215927158823231,0.00284072841176769,0.029902404334396736
+4,Youssef Pig 29_09_25 Scyt Std4,standard,4.0,0.189,1.11,10057.0,10056.758,MM,,,Yousseff Red Scyt 29_09_25.txt,standard,0.189,0.19207376980757965,-0.003073769807579646,-0.01626333231523622
+5,Youssef Pig 29_09_25 Scyt Std3,standard,3.0,0.284,1.12,14572.0,14571.716,MM,,,Yousseff Red Scyt 29_09_25.txt,standard,0.284,0.2849146752326369,-0.0009146752326369412,-0.0032206874388624692
+6,Youssef Pig 29_09_25 Scyt Std2,standard,2.0,0.378,1.13,18864.0,18864.211,MM,,,Yousseff Red Scyt 29_09_25.txt,standard,0.378,0.3731700830032561,0.004829916996743899,0.012777558192444178
+7,Youssef Pig 29_09_25 Scyt Std1,standard,1.0,0.473,1.12,23954.0,23954.328,MM,,,Yousseff Red Scyt 29_09_25.txt,standard,0.473,0.4778345810350482,-0.0048345810350482465,-0.010221101554013207

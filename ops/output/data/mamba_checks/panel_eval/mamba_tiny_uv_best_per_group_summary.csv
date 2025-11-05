@@ -1,0 +1,4 @@
+group_id,count,psnr_mean,psnr_std,sam_mean,sam_std,area_error_median,area_error_90pct
+treatment_3/sample_J/12Oclock,300,50.0425,0.5682,0.7495,0.0530,13.9047,32.8038
+treatment_5/sample_H/6Oclock,300,39.1511,0.2110,1.3160,0.0227,18.5024,23.9564
+treatment_6/sample_I/6Oclock,150,42.3793,0.3710,1.0632,0.0320,13.8804,20.3239

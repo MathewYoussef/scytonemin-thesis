@@ -1,0 +1,105 @@
+{
+  "manifest": "/mnt/Act_of_God/data/validation_panel.csv",
+  "manifest_hash": "10d6c12bb8dd61fc17596956010771d76ba21ed7aeacd57dddc8e29ccb12e7fe",
+  "git_hash": "unknown",
+  "device": "cuda",
+  "args": {
+    "manifest": "data/validation_panel.csv",
+    "expected_hash": "10d6c12bb8dd61fc17596956010771d76ba21ed7aeacd57dddc8e29ccb12e7fe",
+    "root_dir": "data/spectra_for_fold",
+    "baseline_dir": "data/spectra_for_fold",
+    "metadata": "data/metadata/dose_features.csv",
+    "wavelength_grid": "data/spectra_for_fold/wavelength_grid.npy",
+    "checkpoint": null,
+    "checkpoint_dir": "checkpoints/god_run",
+    "top_k": 5,
+    "output_dir": "final_analytics/panel_eval",
+    "device": null,
+    "downstream_script": "scripts/downstream_proxy_eval.py",
+    "batch_size": 256,
+    "num_workers": 0
+  },
+  "versions": {
+    "torch": "2.4.0+cu121",
+    "numpy": "2.1.2",
+    "cuda_available": true
+  },
+  "checkpoints_evaluated": [
+    "/mnt/Act_of_God/checkpoints/god_run/mamba_tiny_uv_best.pt"
+  ],
+  "passing_checkpoints": [],
+  "ranked_order": [
+    "/mnt/Act_of_God/checkpoints/god_run/mamba_tiny_uv_best.pt"
+  ],
+  "best_checkpoint": "/mnt/Act_of_God/checkpoints/god_run/mamba_tiny_uv_best.pt",
+  "best_composite_score": 39.18485578051785,
+  "best_passed_all_gates": false,
+  "per_checkpoint": [
+    {
+      "checkpoint": "/mnt/Act_of_God/checkpoints/god_run/mamba_tiny_uv_best.pt",
+      "composite_score": 39.18485578051785,
+      "aggregate_pass": false,
+      "tail_pass": true,
+      "roi_pass": false,
+      "downstream_pass": true,
+      "passed_all_gates": false,
+      "psnr_mean": 44.15333376566569,
+      "psnr_std": 4.968477985147844,
+      "sam_mean": 1.0388731956481934
+    }
+  ],
+  "gates": {
+    "aggregate_pass": false,
+    "tail_pass": true,
+    "roi_pass": false,
+    "downstream_pass": true
+  },
+  "aggregate_metrics": {
+    "psnr_mean": 44.15333376566569,
+    "psnr_std": 4.968477985147844,
+    "sam_mean": 1.0388731956481934,
+    "pass_gate": false
+  },
+  "tail_metrics": {
+    "psnr_pass_ratio": 1.0,
+    "sam_pass_ratio": 1.0,
+    "joint_pass_ratio": 1.0,
+    "pass_gate": true
+  },
+  "roi_metrics": {
+    "area_within_10_pct_ratio": 0.20533333333333334,
+    "centroid_mae_nm_median": 0.060241010040044785,
+    "depth_mae_median": 0.0003430258366279304,
+    "spurious_peaks": 0,
+    "pass_gate": false
+  },
+  "per_group": {
+    "treatment_3/sample_J/12Oclock": {
+      "count": 300.0,
+      "psnr_mean": 50.04253537495931,
+      "psnr_std": 0.5682345081551272,
+      "sam_mean": 0.7495468854904175,
+      "sam_std": 0.05300239101052284,
+      "area_error_median": 13.9046637532652,
+      "area_error_90pct": 32.803755834348124
+    },
+    "treatment_5/sample_H/6Oclock": {
+      "count": 300.0,
+      "psnr_mean": 39.15113754272461,
+      "psnr_std": 0.21098948626838782,
+      "sam_mean": 1.3160449266433716,
+      "sam_std": 0.0226685032248497,
+      "area_error_median": 18.50240089001752,
+      "area_error_90pct": 23.95635148090026
+    },
+    "treatment_6/sample_I/6Oclock": {
+      "count": 150.0,
+      "psnr_mean": 42.37932299296061,
+      "psnr_std": 0.37096345944969766,
+      "sam_mean": 1.0631824731826782,
+      "sam_std": 0.032046180218458176,
+      "area_error_median": 13.88043832819439,
+      "area_error_90pct": 20.323915299639484
+    }
+  }
+}

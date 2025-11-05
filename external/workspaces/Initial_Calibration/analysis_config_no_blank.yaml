@@ -1,0 +1,59 @@
+paths:
+  chrom_areas_dir: "DAD_RAW_FILES/scytonemin_chromatogram_areas"
+  dad_spectra_csv: "Compiled_DAD_DATA/Scytonemin/scytonemin_spectra_tidy.csv"
+  reflectance_root: "Synthetic_Reflectance_data/raw_normalized"
+  biomass_csv: "DAD_RAW_FILES/sample_biomass.csv"
+  chamber_csv: "DAD_RAW_FILES/chamber_dose_schedule.csv"
+  randomization_csv: "DAD_RAW_FILES/randomization_by_column.csv"
+  standards_csv: "DAD_RAW_FILES/scytonemin_standard_concentrations.csv"
+  outputs:
+    calibrations_dir: "DAD_to_Concentration_AUC"
+    chromatogram_plots_dir: "Chromatogram_Calibration_Plots"
+    reflectance_plots_dir: "Reflectance_to_Concentration_Plots"
+    dad_auc_dir: "Diode_Array_AUC_no_blank"
+    dad_calibration_plots_dir: "Diode_Array_Derived_Calibration_Plots_no_blank"
+
+scytonemin:
+  forms: ["total", "oxidized", "reduced"]
+  expected_rt_min:
+    total: 3.5
+    oxidized: 3.1
+    reduced: 3.9
+  rt_tolerance_min: 0.2
+  loq_handling: "flag"
+
+chemistry:
+  extraction_volume_ml: 1.0
+  dilution_factor: 1.0
+
+spectral:
+  wl_min_nm: 320
+  wl_max_nm: 480
+  wl_step_nm: 1
+  sg_window: 11
+  sg_polyorder: 3
+  subtract_blank_auc: false
+  baseline_method: "linear"
+
+modeling:
+  use_weighted_regression: true
+  weighting: "1/x"
+  kfold: 5
+  lod_multiplier: 3.3
+  loq_multiplier: 10.0
+
+qc:
+  calib_r2_min: 0.98
+  max_abs_rel_residual: 0.15
+  total_vs_parts_tolerance: 0.05
+
+reflectance:
+  variant: "raw_normalized"
+  aggregate_angles: true
+  use_pseudo_absorbance: true
+  smooth_if_available: false
+
+reporting:
+  generate_markdown: true
+  generate_pdf: false
+  include_config_snapshot: true

@@ -1,0 +1,6 @@
+dataset,variant,measurement,F_obs,p_freedman_lane,n_permutations
+chromatogram,delta,delta_conc_mg_ml,3.0873548525241916,0.7271364317841079,2000
+chromatogram,delta,delta_amount_mg_per_gDW,3.3342860496214564,0.7136431784107946,2000
+chromatogram,zscore,z_conc_mg_ml,2.549853255415961,0.7406296851574213,2000
+chromatogram,zscore,z_amount_mg_per_gDW,2.4569918261241215,0.736631684157921,2000
+dad,raw,predicted_total_mg_per_gDW,2.514608917574364,0.7871064467766117,2000

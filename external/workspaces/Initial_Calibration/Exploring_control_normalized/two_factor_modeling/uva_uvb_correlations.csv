@@ -1,0 +1,6 @@
+dataset,variant,corr_uva_uvb,n_obs
+chromatogram,raw,0.9498290192610402,90
+chromatogram,delta,0.9498290192610402,90
+chromatogram,zscore,0.9498290192610402,90
+dad,raw,0.9498290192610404,30
+dad,delta,0.9498290192610404,30

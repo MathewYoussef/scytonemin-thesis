@@ -1,0 +1,17 @@
+{
+  "form": "oxidized",
+  "slope": 3.006420403608398e-08,
+  "slope_se": 3.665320470019773e-09,
+  "intercept": -0.03602999579658384,
+  "intercept_se": 0.023216473211607074,
+  "weighting": "1/x",
+  "r_squared": 0.8850812397414141,
+  "rss_unweighted": 0.02045800187089097,
+  "rss_weighted": 1.6102926845862475e-09,
+  "sigma2": 3.2205853691724947e-10,
+  "degrees_of_freedom": 5,
+  "max_abs_rel_residual": 0.2657659714994241,
+  "blank_std_auc": 46617.07520989492,
+  "lod_mg_ml": 5116927360126.153,
+  "loq_mg_ml": 15505840485230.77
+}

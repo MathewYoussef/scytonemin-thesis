@@ -1,0 +1,17 @@
+{
+  "form": "total",
+  "slope": 4.526109824499496e-08,
+  "slope_se": 6.446972120485181e-09,
+  "intercept": -0.024016494932468612,
+  "intercept_se": 0.02446338651694872,
+  "weighting": "1/x",
+  "r_squared": 0.9078981133153541,
+  "rss_unweighted": 0.028258830434460085,
+  "rss_weighted": 3.6039646942239987e-09,
+  "sigma2": 7.207929388447997e-10,
+  "degrees_of_freedom": 5,
+  "max_abs_rel_residual": 0.3072558423031303,
+  "blank_std_auc": 46617.07520989492,
+  "lod_mg_ml": 3398864679773.092,
+  "loq_mg_ml": 10299589938706.34
+}
