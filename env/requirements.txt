@@ -4,6 +4,7 @@ matplotlib
 seaborn
 pytest
 mkdocs
+mkdocs-material
 scipy
 scikit-learn
 tensorboard
