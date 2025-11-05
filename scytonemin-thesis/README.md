@@ -25,7 +25,7 @@ make docs         # build the MkDocs documentation locally
 
 - See `docs/index.md` for the “Audit in 10 Minutes” walkthrough and per-block expectations.
 - Consult `ops/output/data/uplc_resource_map.md` if you need to reference the archived workspaces under `external/workspaces/`.
-- Heavy Mamba assets can be evaluated via `python src/mamba_ssm/scripts/evaluate_validation_panel.py` using the shipped checkpoints.
+- Heavy Mamba assets can be evaluated via `python src/mamba_ssm/scripts/evaluate_validation_panel.py` using the shipped checkpoints (optional). Installing `torch==2.3`, `torchvision==0.18`, and `mamba-ssm[causal-conv1d]==2.2.5` is required only if you choose to rerun those evaluations; all published metrics already ship in `ops/output/data/mamba_checks/`.
 
 ## Repository Etiquette
 
