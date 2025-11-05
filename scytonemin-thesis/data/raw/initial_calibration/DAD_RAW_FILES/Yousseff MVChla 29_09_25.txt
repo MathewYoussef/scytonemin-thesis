@@ -1,0 +1,218 @@
+Quantify Compound Summary Report 											
+
+Printed Fri Oct 03 11:44:41 2025											
+
+Compound 3:  MVChla Ep1 338											
+
+	#	Name	Type	Std. Conc	RT	Area	IS Area	Response	Primary Flags	Conc.	%Dev
+1	1	Youssef Pig 29_09_25 Chla_Carot Std8		0	4.61	236		235.863	bb		
+2	2	Youssef Pig 29_09_25 Chla_Carot Std7		0	4.6	356		355.77	bb		
+3	3	Youssef Pig 29_09_25 Chla_Carot Std6		0	4.61	421		420.519	bb		
+4	4	Youssef Pig 29_09_25 Chla_Carot Std5		0	4.6	404		403.755	sd		
+5	5	Youssef Pig 29_09_25 Chla_Carot Std4		0							
+6	6	Youssef Pig 29_09_25 Chla_Carot Std3		0							
+7	7	Youssef Pig 29_09_25 Chla_Carot Std2		0							
+8	8	Youssef Pig 29_09_25 Chla_Carot Std1		0							
+9	9	Youssef Pig 29_09_25 Blank3		0					MM-		
+10	10	Youssef Pig 29_09_25 1D		0					MM-
+11	11	Youssef Pig 29_09_25 1F		0	4.58	98		98.09	db
+12	12	Youssef Pig 29_09_25 1G		0	4.58	56		55.986	db
+13	13	Youssef Pig 29_09_26 1I		0	4.58	26		26.077	MM
+14	14	Youssef Pig 29_09_27 1J		0					MM-
+15	15	Youssef Pig 29_09_28 2B		0					MM-
+16	16	Youssef Pig 29_09_29 2E		0	4.59	258		258.315	db
+17	17	Youssef Pig 29_09_30 2G		0					MM-
+18	18	Youssef Pig 29_09_31 2I		0					MM-
+19	19	Youssef Pig 29_09_32 2J		0					MM-
+20	20	Youssef Pig 29_09_33 3A		0	4.6	109		108.637	db
+21	21	Youssef Pig 29_09_34 3C		0	4.59	559		559.323	db
+22	22	Youssef Pig 29_09_35 3D		0	4.56	79		78.868	sb
+23	23	Youssef Pig 29_09_36 3E		0					MM-
+24	24	Youssef Pig 29_09_37 3H		0					MM-
+25	25	Youssef Pig 29_09_38 4A		0					MM-
+26	26	Youssef Pig 29_09_39 4B		0					MM-
+27	27	Youssef Pig 29_09_40 4F		0	4.59	788		787.727	db
+28	28	Youssef Pig 29_09_41 4G		0	4.59	276		275.905	db
+29	29	Youssef Pig 29_09_42 4H		0					MM-
+30	30	Youssef Pig 29_09_43 5B		0	4.59	137		136.575	db
+31	31	Youssef Pig 29_09_44 5D		0	4.56	82		82.151	MM
+32	32	Youssef Pig 29_09_45 5E		0	4.6	394		393.908	db
+33	33	Youssef Pig 29_09_46 5F		0					MM-
+34	34	Youssef Pig 29_09_47 5I		0					MM-
+35	35	Youssef Pig 29_09_48 6C		0	4.57	120		120.408	sb
+36	36	Youssef Pig 29_09_49 6D		0	4.67	235		235.32	db
+37	37	Youssef Pig 29_09_50 6F		0					MM-
+38	38	Youssef Pig 29_09_51 6H		0					
+39	39	Youssef Pig 29_09_52 6J		0					
+
+Compound 4:  MVChla Ep1 430									
+
+	#	Name	Type	Std. Conc	RT	Area	IS Area	Response	Primary Flags	Conc.	%Dev
+1	1	Youssef Pig 29_09_25 Chla_Carot Std8		0	4.6	465		464.558	db		
+2	2	Youssef Pig 29_09_25 Chla_Carot Std7		0	4.6	521		521.421	bb		
+3	3	Youssef Pig 29_09_25 Chla_Carot Std6		0	4.61	501		500.661	MM		
+4	4	Youssef Pig 29_09_25 Chla_Carot Std5		0	4.67	554		553.681	sd		
+5	5	Youssef Pig 29_09_25 Chla_Carot Std4		0	4.69	873		873.267	dd		
+6	6	Youssef Pig 29_09_25 Chla_Carot Std3		0	4.7	1066		1065.649	dd		
+7	7	Youssef Pig 29_09_25 Chla_Carot Std2		0	4.7	1129		1128.804	dd		
+8	8	Youssef Pig 29_09_25 Chla_Carot Std1		0	4.69	1269		1268.856	dd		
+9	9	Youssef Pig 29_09_25 Blank3		0					MM-		
+10	10	Youssef Pig 29_09_25 1D		0	4.69	87		87.282	db		
+11	11	Youssef Pig 29_09_25 1F		0	4.57	194		194.271	MM		
+12	12	Youssef Pig 29_09_25 1G		0	4.56	123		122.792	MM		
+13	13	Youssef Pig 29_09_26 1I		0	4.44	861		861.22	bb		
+14	14	Youssef Pig 29_09_27 1J		0					MM-		
+15	15	Youssef Pig 29_09_28 2B		0					MM-
+16	16	Youssef Pig 29_09_29 2E		0	4.54	559		558.599	sb
+17	17	Youssef Pig 29_09_30 2G		0					MM-
+18	18	Youssef Pig 29_09_31 2I		0					MM-
+19	19	Youssef Pig 29_09_32 2J		0					MM-
+20	20	Youssef Pig 29_09_33 3A		0	4.58	241		240.571	MM
+21	21	Youssef Pig 29_09_34 3C		0	4.57	1105		1105.015	db
+22	22	Youssef Pig 29_09_35 3D		0	4.56	221		220.773	MM
+23	23	Youssef Pig 29_09_36 3E		0	4.61	104		104.44	MM
+24	24	Youssef Pig 29_09_37 3H		0					MM-
+25	25	Youssef Pig 29_09_38 4A		0					MM-
+26	26	Youssef Pig 29_09_39 4B		0					MM-
+27	27	Youssef Pig 29_09_40 4F		0	4.57	1654		1654.494	db
+28	28	Youssef Pig 29_09_41 4G		0	4.55	559		559.153	sb
+29	29	Youssef Pig 29_09_42 4H		0					MM-
+30	30	Youssef Pig 29_09_43 5B		0	4.57	258		258.43	MM
+31	31	Youssef Pig 29_09_44 5D		0	4.57	214		214.104	MM		
+32	32	Youssef Pig 29_09_45 5E		0	4.57	804		803.552	db		
+33	33	Youssef Pig 29_09_46 5F		0					MM-		
+34	34	Youssef Pig 29_09_47 5I		0					MM-		
+35	35	Youssef Pig 29_09_48 6C		0	4.58	299		298.566	MM		
+36	36	Youssef Pig 29_09_49 6D		0	4.66	518		518.426	db		
+37	37	Youssef Pig 29_09_50 6F		0					MM-		
+38	38	Youssef Pig 29_09_51 6H		0					MM-		
+39	39	Youssef Pig 29_09_52 6J		0							
+
+Compound 6:  MVChla 430											
+
+	#	Name	Type	Std. Conc	RT	Area	IS Area	Response	Primary Flags	Conc.	%Dev
+1	1	Youssef Pig 29_09_25 Chla_Carot Std8		0	5.06	595		594.669	bb		
+2	2	Youssef Pig 29_09_25 Chla_Carot Std7		0	5.05	920		919.614	bb		
+3	3	Youssef Pig 29_09_25 Chla_Carot Std6		0	5.05	1312		1311.76	bb		
+4	4	Youssef Pig 29_09_25 Chla_Carot Std5		0	5.04	2228		2228.125	bb
+5	5	Youssef Pig 29_09_25 Chla_Carot Std4		0	5.05	3114		3113.533	db
+6	6	Youssef Pig 29_09_25 Chla_Carot Std3		0	5.04	4619		4619.257	db
+7	7	Youssef Pig 29_09_25 Chla_Carot Std2		0	5.04	3932		3931.883	db
+8	8	Youssef Pig 29_09_25 Chla_Carot Std1		0	5.04	3914		3914.488	db
+9	9	Youssef Pig 29_09_25 Blank3		0					
+10	10	Youssef Pig 29_09_25 1D		0					
+11	11	Youssef Pig 29_09_25 1F		0	5.15	62		62.134	bd
+12	12	Youssef Pig 29_09_25 1G		0					
+13	13	Youssef Pig 29_09_26 1I		0					MM-
+14	14	Youssef Pig 29_09_27 1J		0	5.03	29		29.175	bb
+15	15	Youssef Pig 29_09_28 2B		0	5.03	39		39.102	bb
+16	16	Youssef Pig 29_09_29 2E		0	5.14	95		95.433	bb
+17	17	Youssef Pig 29_09_30 2G		0					
+18	18	Youssef Pig 29_09_31 2I		0					
+19	19	Youssef Pig 29_09_32 2J		0					
+20	20	Youssef Pig 29_09_33 3A		0	5.13	53		52.8	MM
+21	21	Youssef Pig 29_09_34 3C		0	5.14	255		254.746	bb
+22	22	Youssef Pig 29_09_35 3D		0	5.13	80		80.244	bb
+23	23	Youssef Pig 29_09_36 3E		0	5.1	74		74.407	bb
+24	24	Youssef Pig 29_09_37 3H		0					
+25	25	Youssef Pig 29_09_38 4A		0					
+26	26	Youssef Pig 29_09_39 4B		0					
+27	27	Youssef Pig 29_09_40 4F		0	5.14	297		296.879	bd
+28	28	Youssef Pig 29_09_41 4G		0	5.15	138		137.516	bd
+29	29	Youssef Pig 29_09_42 4H		0					
+30	30	Youssef Pig 29_09_43 5B		0	5.14	60		60.458	bb
+31	31	Youssef Pig 29_09_44 5D		0					
+32	32	Youssef Pig 29_09_45 5E		0	5.15	189		188.62	bd
+33	33	Youssef Pig 29_09_46 5F		0					
+34	34	Youssef Pig 29_09_47 5I		0					
+35	35	Youssef Pig 29_09_48 6C		0	5.17	109		108.617	bd
+36	36	Youssef Pig 29_09_49 6D		0	5.06	24		23.633	bd		
+37	37	Youssef Pig 29_09_50 6F		0							
+38	38	Youssef Pig 29_09_51 6H		0							
+39	39	Youssef Pig 29_09_52 6J		0					MM-		
+
+Compound 7:  MVChla Ep2 338											
+
+	#	Name	Type	Std. Conc	RT	Area	IS Area	Response	Primary Flags	Conc.	%Dev
+1	1	Youssef Pig 29_09_25 Chla_Carot Std8		0	5.78	16		16.33	db		
+2	2	Youssef Pig 29_09_25 Chla_Carot Std7		0							
+3	3	Youssef Pig 29_09_25 Chla_Carot Std6		0	5.82	54		54.18	db		
+4	4	Youssef Pig 29_09_25 Chla_Carot Std5		0	5.79	114		113.604	db		
+5	5	Youssef Pig 29_09_25 Chla_Carot Std4		0	5.79	159		158.518	db		
+6	6	Youssef Pig 29_09_25 Chla_Carot Std3		0	5.78	234		233.819	db		
+7	7	Youssef Pig 29_09_25 Chla_Carot Std2		0	5.78	177		176.551	db		
+8	8	Youssef Pig 29_09_25 Chla_Carot Std1		0	5.78	185		185.369	db		
+9	9	Youssef Pig 29_09_25 Blank3		0					MM-
+10	10	Youssef Pig 29_09_25 1D		0					
+11	11	Youssef Pig 29_09_25 1F		0					
+12	12	Youssef Pig 29_09_25 1G		0					
+13	13	Youssef Pig 29_09_26 1I		0					MM-
+14	14	Youssef Pig 29_09_27 1J		0					
+15	15	Youssef Pig 29_09_28 2B		0					
+16	16	Youssef Pig 29_09_29 2E		0					
+17	17	Youssef Pig 29_09_30 2G		0					
+18	18	Youssef Pig 29_09_31 2I		0					
+19	19	Youssef Pig 29_09_32 2J		0					
+20	20	Youssef Pig 29_09_33 3A		0					
+21	21	Youssef Pig 29_09_34 3C		0					
+22	22	Youssef Pig 29_09_35 3D		0					MM-
+23	23	Youssef Pig 29_09_36 3E		0					
+24	24	Youssef Pig 29_09_37 3H		0					MM-
+25	25	Youssef Pig 29_09_38 4A		0					
+26	26	Youssef Pig 29_09_39 4B		0					
+27	27	Youssef Pig 29_09_40 4F		0					MM-
+28	28	Youssef Pig 29_09_41 4G		0					MM-
+29	29	Youssef Pig 29_09_42 4H		0					
+30	30	Youssef Pig 29_09_43 5B		0					
+31	31	Youssef Pig 29_09_44 5D		0					MM-
+32	32	Youssef Pig 29_09_45 5E		0					
+33	33	Youssef Pig 29_09_46 5F		0					
+34	34	Youssef Pig 29_09_47 5I		0					MM-
+35	35	Youssef Pig 29_09_48 6C		0					
+36	36	Youssef Pig 29_09_49 6D		0					
+37	37	Youssef Pig 29_09_50 6F		0					MM-
+38	38	Youssef Pig 29_09_51 6H		0					MM-
+39	39	Youssef Pig 29_09_52 6J		0					MM-
+
+Compound 8:  MVChla Ep2 430											
+
+	#	Name	Type	Std. Conc	RT	Area	IS Area	Response	Primary Flags	Conc.	%Dev
+1	1	Youssef Pig 29_09_25 Chla_Carot Std8		0	5.81	272		272.482	db		
+2	2	Youssef Pig 29_09_25 Chla_Carot Std7		0	5.81	457		457.345	dd		
+3	3	Youssef Pig 29_09_25 Chla_Carot Std6		0	5.81	825		824.514	dd		
+4	4	Youssef Pig 29_09_25 Chla_Carot Std5		0	5.8	1573		1572.754	dd		
+5	5	Youssef Pig 29_09_25 Chla_Carot Std4		0	5.81	2119		2118.98	dd		
+6	6	Youssef Pig 29_09_25 Chla_Carot Std3		0	5.81	3131		3130.907	dd		
+7	7	Youssef Pig 29_09_25 Chla_Carot Std2		0	5.81	2548		2547.656	dd		
+8	8	Youssef Pig 29_09_25 Chla_Carot Std1		0	5.8	2579		2579.281	dd		
+9	9	Youssef Pig 29_09_25 Blank3		0					MM-		
+10	10	Youssef Pig 29_09_25 1D		0	5.78	75		75.387	MM		
+11	11	Youssef Pig 29_09_25 1F		0	5.79	33		32.69	bd		
+12	12	Youssef Pig 29_09_25 1G		0	5.75	20		19.523	MM		
+13	13	Youssef Pig 29_09_26 1I		0	5.79	51		50.614	bb		
+14	14	Youssef Pig 29_09_27 1J		0	5.8	53		52.69	bb
+15	15	Youssef Pig 29_09_28 2B		0					
+16	16	Youssef Pig 29_09_29 2E		0	5.81	31		30.55	MM
+17	17	Youssef Pig 29_09_30 2G		0	5.78	24		23.758	MM
+18	18	Youssef Pig 29_09_31 2I		0					
+19	19	Youssef Pig 29_09_32 2J		0					
+20	20	Youssef Pig 29_09_33 3A		0					
+21	21	Youssef Pig 29_09_34 3C		0	5.8	43		43.061	MM
+22	22	Youssef Pig 29_09_35 3D		0	5.78	40		39.833	bb
+23	23	Youssef Pig 29_09_36 3E		0	5.81	82		81.545	bb
+24	24	Youssef Pig 29_09_37 3H		0					MM-
+25	25	Youssef Pig 29_09_38 4A		0	5.78	58		57.596	MM
+26	26	Youssef Pig 29_09_39 4B		0	5.78	23		22.838	MM
+27	27	Youssef Pig 29_09_40 4F		0	5.81	79		79.335	bb
+28	28	Youssef Pig 29_09_41 4G		0	5.81	80		79.836	bb
+29	29	Youssef Pig 29_09_42 4H		0	5.79	76		76.012	bb
+30	30	Youssef Pig 29_09_43 5B		0	5.8	24		23.647	MM
+31	31	Youssef Pig 29_09_44 5D		0	5.8	66		66.094	MM
+32	32	Youssef Pig 29_09_45 5E		0	5.83	61		61.243	MM
+33	33	Youssef Pig 29_09_46 5F		0	5.82	64		64.067	bb
+34	34	Youssef Pig 29_09_47 5I		0	5.78	18		17.849	bd
+35	35	Youssef Pig 29_09_48 6C		0	5.82	90		89.997	bb
+36	36	Youssef Pig 29_09_49 6D		0	5.88	83		83.465	bb
+37	37	Youssef Pig 29_09_50 6F		0					
+38	38	Youssef Pig 29_09_51 6H		0	5.76	275		275.405	bd
+39	39	Youssef Pig 29_09_52 6J		0					MM-

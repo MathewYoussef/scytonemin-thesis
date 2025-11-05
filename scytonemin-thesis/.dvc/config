@@ -1,0 +1,4 @@
+[core]
+    remote = thesis-data
+[remote "thesis-data"]
+    url = s3://scytonemin-thesis-data

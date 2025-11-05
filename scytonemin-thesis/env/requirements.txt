@@ -1,0 +1,12 @@
+pandas
+numpy
+matplotlib
+seaborn
+pytest
+mkdocs
+scipy
+scikit-learn
+tensorboard
+torch==2.3.0
+torchvision==0.18.0
+mamba-ssm[causal-conv1d]==2.2.5

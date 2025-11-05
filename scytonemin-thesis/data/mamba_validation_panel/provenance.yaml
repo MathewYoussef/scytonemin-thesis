@@ -1,0 +1,15 @@
+dataset_id: mamba_validation_panel
+block: Act_of_God_Mamba_Results
+source_commit: 9049eb545edd483ee8923b2890a24e4a4fafa5a9
+sources:
+  - Act_of_God_Mamba_Results/data/validation_panel.csv
+  - Act_of_God_Mamba_Results/data/validation_panel_summary.md
+  - Act_of_God_Mamba_Results/data/metadata/dose_features.csv
+transforms:
+  - step: generate_fold_manifests
+    script: Act_of_God_Mamba_Results/scripts/generate_fold_manifests.py
+    description: Builds train/validation splits and associated manifests from staged spectra.
+  - step: evaluate_validation_panel
+    script: Act_of_God_Mamba_Results/evaluate_validation_panel.py
+    description: Validates panel coverage and exports summary diagnostics.
+notes: Validation panel assembled from `data/spectra_for_fold/` according to the manifests; rerun the manifest generator before re-exporting the validation CSV.

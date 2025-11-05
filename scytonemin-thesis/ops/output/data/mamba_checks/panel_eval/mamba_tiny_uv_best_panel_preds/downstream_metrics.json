@@ -1,0 +1,22 @@
+{
+  "replicate_consistency": {
+    "baseline_variance": 2.9157244577122232e-05,
+    "denoised_variance": 1.3832432191641434e-05,
+    "reduction_pct": 0.525591927760731,
+    "pass": true
+  },
+  "separability": {
+    "baseline_ratio": 21.297780636957146,
+    "denoised_ratio": 30.33814369811178,
+    "delta_ratio": 9.040363061154633,
+    "pass": true
+  },
+  "dose_monotonicity": {
+    "dose_column_used": "UVA_total_mWh_cm2",
+    "median_delta_rho": 0.0,
+    "improved_ratio": 1.0,
+    "peak_f1_mean": NaN,
+    "pass": true
+  },
+  "pass": true
+}

@@ -1,0 +1,17 @@
+dataset_id: reflectance_canonical
+block: Reflectance
+source_commit: 9049eb545edd483ee8923b2890a24e4a4fafa5a9
+sources:
+  - Reflectance/reflectance/canonical_dataset/dose_summary.csv
+  - Reflectance/reflectance/canonical_dataset/dose_reflectance_stats.csv
+  - Reflectance/reflectance/canonical_dataset/precision_weighted_concentrations.csv
+  - Reflectance/reflectance/canonical_dataset/precision_weighted_concentrations_treatment.csv
+  - Reflectance/reflectance/canonical_dataset/reflectance_trimmed_stats.csv
+transforms:
+  - step: build_canonical_dataset
+    script: Reflectance/reflectance/build_canonical_dataset.py
+    description: Aggregates reflectance and DAD concentration data into canonical dose-level tables.
+  - step: compute_precision_weights
+    script: Reflectance/reflectance/compute_precision_weighted_concentrations.py
+    description: Applies precision-weighted blending between chromatogram and DAD concentration estimates.
+notes: Canonical outputs staged October 2025; regenerate via `python -m reflectance.build_canonical_dataset` followed by precision weighting scripts.

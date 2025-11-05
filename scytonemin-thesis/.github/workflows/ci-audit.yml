@@ -1,0 +1,26 @@
+name: CI Audit
+
+on:
+  pull_request:
+    branches: [ main ]
+  push:
+    branches: [ main ]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r env/requirements.txt
+      - name: Run quick tests
+        run: |
+          pytest tests -m "quick" --maxfail=1
+      - name: Build docs
+        run: |
+          mkdocs build -q

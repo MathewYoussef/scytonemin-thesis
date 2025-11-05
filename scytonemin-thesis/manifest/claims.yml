@@ -1,0 +1,10 @@
+# Map each claim identifier to supporting code, data, and tests.
+claims:
+  - id: C-001
+    title: Placeholder claim
+    data:
+      - data/reflectance_canonical/schema.json
+    code:
+      - notebooks/run_full_pipeline.py
+    tests:
+      - tests/test_sanity.py

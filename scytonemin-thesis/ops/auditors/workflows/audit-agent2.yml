@@ -1,0 +1,27 @@
+name: audit-agent2
+on:
+  pull_request:
+    types: [opened, synchronize, labeled, reopened]
+jobs:
+  audit:
+    if: contains(join(github.event.pull_request.labels.*.name, ','), 'A2')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scope check
+        run: |
+          BASE="${{ github.event.pull_request.base.ref }}"
+          HEAD="${{ github.event.pull_request.head.ref }}"
+          CHANGED=$(git diff --name-only origin/$BASE...origin/$HEAD || true)
+          BAD=$(echo "$CHANGED" | grep -vE '^(docs/|scaffold/|mkdocs.yml$|Makefile$|.github/|ops/auditors/|ops/agents/.*\.md$)' || true)
+          if [ -n "$BAD" ]; then echo "Out-of-scope:"; echo "$BAD"; exit 1; fi
+      - name: Build docs
+        run: |
+          python3 -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material
+          if [ -f mkdocs.yml ]; then mkdocs build -q; else echo "mkdocs.yml missing"; exit 1; fi
+      - name: Check scaffold READMEs
+        run: |
+          for d in hub reflectance initial_calibration mamba_ssm supplements; do
+            [ -f "scaffold/$d/README.md" ] || { echo "Missing scaffold/$d/README.md"; exit 1; }
+          done

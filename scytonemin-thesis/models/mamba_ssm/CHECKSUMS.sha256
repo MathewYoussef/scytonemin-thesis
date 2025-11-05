@@ -1,0 +1,3 @@
+f2d142f188b5850036d48b173a19ffa95b0c7e29de3c45aeb9be936b081f025d  ./checkpoints/god_run/mamba_tiny_uv_best.pt
+5b6536d25e1b50b8f3b0dea8d1b0b134dcf1e0ca7bb003371fdbc2200e644540  ./prod/Track_H_fold_02/mamba_tiny_uv_best.pt
+53eee4b0ab03e259c087e27169dacca2d46125c97d92bb01aeff7e21617ba0cb  ./README.md

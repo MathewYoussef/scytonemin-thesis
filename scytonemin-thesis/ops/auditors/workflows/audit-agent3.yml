@@ -1,0 +1,45 @@
+name: audit-agent3
+on:
+  pull_request:
+    types: [opened, synchronize, labeled, reopened]
+jobs:
+  audit:
+    if: contains(join(github.event.pull_request.labels.*.name, ','), 'A3')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Scope check
+        run: |
+          BASE="${{ github.event.pull_request.base.ref }}"
+          HEAD="${{ github.event.pull_request.head.ref }}"
+          CHANGED=$(git diff --name-only origin/$BASE...origin/$HEAD || true)
+          BAD=$(echo "$CHANGED" | grep -vE '^(data/|models/|ops/output/data/|scaffold/.*/figures/|.github/|ops/auditors/|ops/agents/.*\.md$)' || true)
+          if [ -n "$BAD" ]; then echo "Out-of-scope:"; echo "$BAD"; exit 1; fi
+      - name: Check catalog and checks
+        run: |
+          [ -f ops/output/data/catalog.csv ] || { echo "Missing ops/output/data/catalog.csv"; exit 1; }
+          [ -f ops/output/data/checks.md ] || { echo "Missing ops/output/data/checks.md"; exit 1; }
+      - name: Check sample sizes and schema presence
+        run: |
+          python3 - <<'PY'
+import os, sys, json
+from pathlib import Path
+def too_large(p): 
+    return p.stat().st_size > 10*1024*1024
+bad=[]
+for p in Path("data-sample").rglob("*"):
+    if p.is_file() and too_large(p): bad.append((str(p), p.stat().st_size))
+if bad:
+    print("Sample files >10MB:", bad); sys.exit(1)
+missing=[]
+for d in Path("data").glob("*"):
+    if d.is_dir():
+        if not (d/"schema.json").exists(): missing.append(str(d/"schema.json"))
+        if not (d/"README.md").exists(): missing.append(str(d/"README.md"))
+        if not (d/"provenance.yaml").exists(): missing.append(str(d/"provenance.yaml"))
+if missing:
+    print("Missing dataset metadata:", "\\n".join(missing)); sys.exit(1)
+print("A3 checks OK")
+PY

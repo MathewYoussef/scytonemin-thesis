@@ -1,0 +1,200 @@
+{
+  "dataset_id": "supplements_dose_schedule",
+  "title": "UV Chamber Dose Schedule",
+  "block": "Supplements",
+  "tables": [
+    {
+      "path": "Supplements/July_26_2025_DOSE_SCHEDULE_UPDATED/Calibration_files/chamber_dose_schedule.csv",
+      "primary_key": [
+        "timestamp"
+      ],
+      "column_count": 9,
+      "row_count": 10,
+      "columns": [
+        {
+          "name": "grid (#)",
+          "type": "integer",
+          "example": "1"
+        },
+        {
+          "name": "UVA_hours (h)",
+          "type": "number",
+          "example": "24.0"
+        },
+        {
+          "name": "UVB_hours (h)",
+          "type": "number",
+          "example": "1.065625"
+        },
+        {
+          "name": "P_UVA (mW cm^-2)",
+          "type": "number",
+          "example": "2.787"
+        },
+        {
+          "name": "P_UVB (mW cm^-2)",
+          "type": "number",
+          "example": "0.553"
+        },
+        {
+          "name": "MDV_UVA_24h_power (mW cm^-2)",
+          "type": "number",
+          "example": "2.2671"
+        },
+        {
+          "name": "MDV_UVB_24h_power (mW cm^-2)",
+          "type": "number",
+          "example": "0.0341"
+        },
+        {
+          "name": "%MDV_UVA_dose (%)",
+          "type": "number",
+          "example": "122.93238057430197"
+        },
+        {
+          "name": "%MDV_UVB_dose (%)",
+          "type": "number",
+          "example": "72.00520833333334"
+        }
+      ],
+      "size_bytes": 932,
+      "sha256": "beae15f861838fe444a1baa7eb6bd29d8b971f7f4e9d14622239c184f727c428"
+    },
+    {
+      "path": "Supplements/July_26_2025_DOSE_SCHEDULE_UPDATED/Calibration_files/MDV_24h_average_power.csv",
+      "primary_key": [
+        "timestamp"
+      ],
+      "column_count": 3,
+      "row_count": 1,
+      "columns": [
+        {
+          "name": "",
+          "type": "string",
+          "example": "mW_cm2"
+        },
+        {
+          "name": "UVB_mW_cm2",
+          "type": "number",
+          "example": "0.0341"
+        },
+        {
+          "name": "UVA_mW_cm2",
+          "type": "number",
+          "example": "2.2671"
+        }
+      ],
+      "size_bytes": 44,
+      "sha256": "180aa92a3d523411d15b8918f9426121c9dda6eac711de5400f9a14fa88b61c4"
+    },
+    {
+      "path": "Supplements/July_26_2025_DOSE_SCHEDULE_UPDATED/Calibration_files/uva_calibrated.csv",
+      "primary_key": [
+        "timestamp"
+      ],
+      "column_count": 7,
+      "row_count": 10,
+      "columns": [
+        {
+          "name": "grid",
+          "type": "integer",
+          "example": "1"
+        },
+        {
+          "name": "distance_mm",
+          "type": "number",
+          "example": "45.0"
+        },
+        {
+          "name": "theta_deg",
+          "type": "number",
+          "example": "16.305768423345732"
+        },
+        {
+          "name": "hyp_mm",
+          "type": "number",
+          "example": "158.42845653834203"
+        },
+        {
+          "name": "irr_corr_mW_cm2",
+          "type": "number",
+          "example": "2.7866983372921617"
+        },
+        {
+          "name": "lower_mW_cm2",
+          "type": "number",
+          "example": "2.6473634204275536"
+        },
+        {
+          "name": "upper_mW_cm2",
+          "type": "number",
+          "example": "2.92603325415677"
+        }
+      ],
+      "size_bytes": 1080,
+      "sha256": "566eb640121faa0a150417e2059b5865e1a68f76eb1b97454b70aa58f7b0fb07"
+    },
+    {
+      "path": "Supplements/July_26_2025_DOSE_SCHEDULE_UPDATED/Calibration_files/uvb_calibrated.csv",
+      "primary_key": [
+        "timestamp"
+      ],
+      "column_count": 10,
+      "row_count": 40,
+      "columns": [
+        {
+          "name": "grid",
+          "type": "integer",
+          "example": "1"
+        },
+        {
+          "name": "time_min",
+          "type": "string",
+          "example": "0"
+        },
+        {
+          "name": "distance_mm",
+          "type": "number",
+          "example": "45.0"
+        },
+        {
+          "name": "theta_deg",
+          "type": "number",
+          "example": "11.674415618537305"
+        },
+        {
+          "name": "hyp_mm",
+          "type": "number",
+          "example": "221.01830495439606"
+        },
+        {
+          "name": "irr_corr_mW_cm2",
+          "type": "number",
+          "example": "0.36869626782643883"
+        },
+        {
+          "name": "lower_mW_cm2",
+          "type": "number",
+          "example": "0.3502614544351169"
+        },
+        {
+          "name": "upper_mW_cm2",
+          "type": "number",
+          "example": "0.38713108121776074"
+        },
+        {
+          "name": "dose_mJ_cm2_t0_60",
+          "type": "number",
+          "example": "1990.9598462627696"
+        },
+        {
+          "name": "avg_mW_cm2_t0_60",
+          "type": "number",
+          "example": "0.5530444017396582"
+        }
+      ],
+      "size_bytes": 4918,
+      "sha256": "11ed146ff00b6453f3d0f3b0def0e27d6d5e0b3c897d479ed4c2ca8d4b277f25"
+    }
+  ]
+}

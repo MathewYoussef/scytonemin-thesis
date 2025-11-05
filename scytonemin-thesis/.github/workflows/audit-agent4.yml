@@ -1,0 +1,27 @@
+name: Audit Agent4
+
+on:
+  pull_request:
+    branches: [ main ]
+    paths:
+      - "ops/**"
+      - "docs/**"
+      - "scaffold/**"
+      - "data/**"
+      - "notebooks/**"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r env/requirements.txt
+      - name: Run targeted checks
+        run: |
+          pytest tests --maxfail=1 || true

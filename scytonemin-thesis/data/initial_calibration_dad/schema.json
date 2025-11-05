@@ -1,0 +1,337 @@
+{
+  "dataset_id": "initial_calibration_dad",
+  "title": "DAD Derived Concentrations (Corrected)",
+  "block": "Initial_Calibration",
+  "tables": [
+    {
+      "path": "Initial_Calibration/DAD_derived_concentrations_corrected.csv",
+      "primary_key": [
+        "sample_id"
+      ],
+      "column_count": 14,
+      "row_count": 30,
+      "columns": [
+        {
+          "name": "sample_id",
+          "type": "string",
+          "example": "1D"
+        },
+        {
+          "name": "p_uva_mw_cm2",
+          "type": "number",
+          "example": "3.185"
+        },
+        {
+          "name": "p_uvb_mw_cm2",
+          "type": "number",
+          "example": "0.707"
+        },
+        {
+          "name": "uva_uvb_ratio",
+          "type": "number",
+          "example": "4.504950495049505"
+        },
+        {
+          "name": "dry_biomass_g",
+          "type": "number",
+          "example": "0.06"
+        },
+        {
+          "name": "auc_total_320_480",
+          "type": "number",
+          "example": "3042167.0"
+        },
+        {
+          "name": "predicted_total_mg_ml",
+          "type": "number",
+          "example": "0.1136753245322129"
+        },
+        {
+          "name": "auc_oxidized_320_480",
+          "type": "number",
+          "example": "2799392.0"
+        },
+        {
+          "name": "predicted_oxidized_mg_ml",
+          "type": "number",
+          "example": "0.0499708839627223"
+        },
+        {
+          "name": "auc_reduced_320_480",
+          "type": "number",
+          "example": "3745622.0"
+        },
+        {
+          "name": "predicted_reduced_mg_ml",
+          "type": "number",
+          "example": "0.1547867546086958"
+        },
+        {
+          "name": "predicted_total_mg_per_gDW",
+          "type": "number",
+          "example": "1.8945887422035486"
+        },
+        {
+          "name": "predicted_oxidized_mg_per_gDW",
+          "type": "number",
+          "example": "0.8328480660453716"
+        },
+        {
+          "name": "predicted_reduced_mg_per_gDW",
+          "type": "number",
+          "example": "2.579779243478263"
+        }
+      ],
+      "size_bytes": 5643,
+      "sha256": "b40085984a2647f115417b40b48a8de0b6247b7faa220b02a9dc3ce3732d20f9"
+    },
+    {
+      "path": "Initial_Calibration/DAD_derived_concentrations.csv",
+      "primary_key": [
+        "sample_id"
+      ],
+      "column_count": 11,
+      "row_count": 30,
+      "columns": [
+        {
+          "name": "sample_id",
+          "type": "string",
+          "example": "1D"
+        },
+        {
+          "name": "p_uva_mw_cm2",
+          "type": "number",
+          "example": "3.185"
+        },
+        {
+          "name": "p_uvb_mw_cm2",
+          "type": "number",
+          "example": "0.707"
+        },
+        {
+          "name": "uva_uvb_ratio",
+          "type": "number",
+          "example": "4.504950495049505"
+        },
+        {
+          "name": "dry_biomass_g",
+          "type": "number",
+          "example": "0.06"
+        },
+        {
+          "name": "auc_total_320_480",
+          "type": "number",
+          "example": "3042167.0"
+        },
+        {
+          "name": "predicted_total_mg_ml",
+          "type": "number",
+          "example": "0.11367532453221295"
+        },
+        {
+          "name": "auc_oxidized_320_480",
+          "type": "number",
+          "example": "2799392.0"
+        },
+        {
+          "name": "predicted_oxidized_mg_ml",
+          "type": "number",
+          "example": "0.049970883962722305"
+        },
+        {
+          "name": "auc_reduced_320_480",
+          "type": "number",
+          "example": "3745622.0"
+        },
+        {
+          "name": "predicted_reduced_mg_ml",
+          "type": "number",
+          "example": "0.15478675460869587"
+        }
+      ],
+      "size_bytes": 3967,
+      "sha256": "053313608605b7263dde3e2a14b3b28e1b84d5f2e423582799a0dec32f6f2401"
+    },
+    {
+      "path": "Initial_Calibration/diode_array_auc.csv",
+      "primary_key": [
+        "sample_id"
+      ],
+      "column_count": 11,
+      "row_count": 113,
+      "columns": [
+        {
+          "name": "sample_id",
+          "type": "string",
+          "example": "Blank 1"
+        },
+        {
+          "name": "sample_category",
+          "type": "string",
+          "example": "blank"
+        },
+        {
+          "name": "spectrum_state",
+          "type": "string",
+          "example": "blank"
+        },
+        {
+          "name": "auc_raw",
+          "type": "number",
+          "example": "127299.5"
+        },
+        {
+          "name": "n_points",
+          "type": "number",
+          "example": "160.0"
+        },
+        {
+          "name": "wavelength_min",
+          "type": "number",
+          "example": "320.9"
+        },
+        {
+          "name": "wavelength_max",
+          "type": "number",
+          "example": "479.9"
+        },
+        {
+          "name": "auc_corrected",
+          "type": "number",
+          "example": "127299.5"
+        },
+        {
+          "name": "blank_baseline_auc",
+          "type": "string",
+          "example": ""
+        },
+        {
+          "name": "blank_mean_auc",
+          "type": "number",
+          "example": "94336.25"
+        },
+        {
+          "name": "blank_std_auc",
+          "type": "number",
+          "example": "46617.07520989492"
+        }
+      ],
+      "size_bytes": 9809,
+      "sha256": "9b9a148f7025f8fdb4166efafe03934b102aae68bc1fbf80a8f38e3baabbd8ad"
+    },
+    {
+      "path": "Initial_Calibration/treatments_corrected_amounts.csv",
+      "primary_key": [
+        "sample_id"
+      ],
+      "column_count": 12,
+      "row_count": 90,
+      "columns": [
+        {
+          "name": "sample_id",
+          "type": "string",
+          "example": "1D"
+        },
+        {
+          "name": "form",
+          "type": "string",
+          "example": "oxidized"
+        },
+        {
+          "name": "conc_mg_ml",
+          "type": "number",
+          "example": "0.02214567689442471"
+        },
+        {
+          "name": "conc_se_mg_ml",
+          "type": "number",
+          "example": "0.006490567340438742"
+        },
+        {
+          "name": "amount_mg_per_gDW",
+          "type": "number",
+          "example": "0.3690946149070785"
+        },
+        {
+          "name": "amount_se_mg_per_gDW",
+          "type": "number",
+          "example": "0.1081761223406457"
+        },
+        {
+          "name": "loq_flag",
+          "type": "string",
+          "example": "False"
+        },
+        {
+          "name": "dry_biomass_g",
+          "type": "number",
+          "example": "0.06"
+        },
+        {
+          "name": "p_uva_mw_cm2",
+          "type": "number",
+          "example": "3.185"
+        },
+        {
+          "name": "p_uvb_mw_cm2",
+          "type": "number",
+          "example": "0.707"
+        },
+        {
+          "name": "uva_pct_mdv",
+          "type": "number",
+          "example": "140.4878479114287"
+        },
+        {
+          "name": "uvb_pct_mdv",
+          "type": "number",
+          "example": "92.05729166666666"
+        }
+      ],
+      "size_bytes": 12879,
+      "sha256": "11385f0b20179e0ea7c0c572d6aebd3a8a574ef3921ce5d7a6f9cb81100d9895"
+    },
+    {
+      "path": "Initial_Calibration/sample_id_truth.csv",
+      "primary_key": [
+        "sample_id"
+      ],
+      "column_count": 6,
+      "row_count": 60,
+      "columns": [
+        {
+          "name": "sample_id",
+          "type": "string",
+          "example": "1A"
+        },
+        {
+          "name": "dry_biomass_g",
+          "type": "number",
+          "example": "0.06"
+        },
+        {
+          "name": "p_uva_mw_cm2",
+          "type": "number",
+          "example": "3.185"
+        },
+        {
+          "name": "p_uvb_mw_cm2",
+          "type": "number",
+          "example": "0.707"
+        },
+        {
+          "name": "uva_pct_mdv",
+          "type": "number",
+          "example": "140.4878479114287"
+        },
+        {
+          "name": "uvb_pct_mdv",
+          "type": "number",
+          "example": "92.05729166666666"
+        }
+      ],
+      "size_bytes": 2827,
+      "sha256": "8cc0a223e580924ccba5f162bd8cfbc4a720b873966b31a5489be4a9e61a64d7"
+    }
+  ]
+}

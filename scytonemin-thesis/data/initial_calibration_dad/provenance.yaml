@@ -1,0 +1,20 @@
+dataset_id: initial_calibration_dad
+block: Initial_Calibration
+source_commit: 9049eb545edd483ee8923b2890a24e4a4fafa5a9
+sources:
+  - Initial_Calibration/DAD_derived_concentrations_corrected.csv
+  - Initial_Calibration/DAD_derived_concentrations.csv
+  - Initial_Calibration/diode_array_auc.csv
+  - Initial_Calibration/treatments_corrected_amounts.csv
+  - Initial_Calibration/sample_id_truth.csv
+transforms:
+  - step: extract_auc
+    script: Initial_Calibration/Scripts/compute_dad_auc.py
+    description: Integrates diode-array absorbance to derive band-specific AUC values.
+  - step: calibrate_predictions
+    script: Initial_Calibration/Scripts/predict_dad_concentrations.py
+    description: Applies regression calibration from standards to predicted concentrations.
+  - step: normalize_blanks
+    script: Initial_Calibration/Scripts/normalize_dad_predictions.py
+    description: Removes blank signals and normalizes concentrations by dry biomass.
+notes: Regenerate by executing the stage pipeline (`run_stage_a.py` → `run_stage_bc.py`) inside `Initial_Calibration/Scripts` with the raw `DAD_RAW_FILES/` inputs.

@@ -1,0 +1,16 @@
+dataset_id: supplements_dose_schedule
+block: Supplements
+source_commit: 9049eb545edd483ee8923b2890a24e4a4fafa5a9
+sources:
+  - Supplements/July_26_2025_DOSE_SCHEDULE_UPDATED/Calibration_files/chamber_dose_schedule.csv
+  - Supplements/July_26_2025_DOSE_SCHEDULE_UPDATED/Calibration_files/MDV_24h_average_power.csv
+  - Supplements/July_26_2025_DOSE_SCHEDULE_UPDATED/Calibration_files/uva_calibrated.csv
+  - Supplements/July_26_2025_DOSE_SCHEDULE_UPDATED/Calibration_files/uvb_calibrated.csv
+transforms:
+  - step: solarmeter_conversion
+    script: Supplements/July_26_2025_DOSE_SCHEDULE_UPDATED/Calibration_files/solarmeter_to_dose.py
+    description: Converts SolarMeter readings into dose-equivalent irradiance columns.
+  - step: dose_schedule_export
+    script: Supplements/July_26_2025_DOSE_SCHEDULE_UPDATED/Calibration_files/dosage_calendar.py
+    description: Generates the chamber dose schedule from calibrated irradiance readings.
+notes: Calibration files ingest raw meter logs in the same directory; rerun the scripts after updating the raw `UVA/UVB_Readings__Raw_.csv` data.

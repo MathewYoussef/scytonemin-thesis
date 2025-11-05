@@ -1,0 +1,49 @@
+{
+  "dataset_id": "mamba_validation_panel",
+  "title": "Validation Panel Spectra",
+  "block": "Act_of_God_Mamba_Results",
+  "tables": [
+    {
+      "path": "Act_of_God_Mamba_Results/data/validation_panel.csv",
+      "primary_key": [
+        "sample_id"
+      ],
+      "column_count": 6,
+      "row_count": 750,
+      "columns": [
+        {
+          "name": "relative_path",
+          "type": "string",
+          "example": "treatment_3/sample_J/12Oclock/rep_000.npy"
+        },
+        {
+          "name": "treatment",
+          "type": "string",
+          "example": "treatment_3"
+        },
+        {
+          "name": "sample",
+          "type": "string",
+          "example": "sample_J"
+        },
+        {
+          "name": "angle",
+          "type": "string",
+          "example": "12Oclock"
+        },
+        {
+          "name": "group_id",
+          "type": "string",
+          "example": "treatment_3/sample_J/12Oclock"
+        },
+        {
+          "name": "source_path",
+          "type": "string",
+          "example": "/Users/mathewyoussef/Desktop/extremophile_detection/Data/Final_Experiment_August_18_2025/Treatment_3_UVA74p63_UVB76p04/J/Angle_12Oclock/sample_3_J_12Oclock_ST026791__70__16571.txt"
+        }
+      ],
+      "size_bytes": 130189,
+      "sha256": "10d6c12bb8dd61fc17596956010771d76ba21ed7aeacd57dddc8e29ccb12e7fe"
+    }
+  ]
+}

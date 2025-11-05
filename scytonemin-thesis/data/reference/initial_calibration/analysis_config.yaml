@@ -1,0 +1,63 @@
+paths:
+  chrom_areas_dir: "../../raw/initial_calibration/DAD_RAW_FILES/scytonemin_chromatogram_areas"
+  dad_spectra_csv: "../../raw/initial_calibration/Compiled_DAD_DATA/Scytonemin/scytonemin_spectra_tidy.csv"
+  reflectance_root: "../../raw/initial_calibration/Synthetic_Reflectance_data/raw_normalized"
+  biomass_csv: "../../raw/initial_calibration/DAD_RAW_FILES/sample_biomass.csv"
+  chamber_csv: "../../raw/initial_calibration/DAD_RAW_FILES/chamber_dose_schedule.csv"
+  randomization_csv: "../../raw/initial_calibration/DAD_RAW_FILES/randomization_by_column.csv"
+  standards_csv: "../../raw/initial_calibration/DAD_RAW_FILES/scytonemin_standard_concentrations.csv"
+  sample_truth_csv: "sample_id_truth.csv"
+  outputs:
+    calibrations_dir: "../../raw/initial_calibration/DAD_to_Concentration_AUC"
+    chromatogram_plots_dir: "../../raw/initial_calibration/Chromatogram_Calibration_Plots"
+    reflectance_plots_dir: "../../raw/initial_calibration/Reflectance_to_Concentration_Plots"
+    dad_auc_dir: "../../raw/initial_calibration/Diode_Array_AUC"
+    dad_calibration_plots_dir: "../../raw/initial_calibration/Diode_Array_Derived_Calibration_Plots"
+
+scytonemin:
+  forms: ["total", "oxidized", "reduced"]
+  expected_rt_min:
+    total: 3.5
+    oxidized: 3.1
+    reduced: 3.9
+  rt_tolerance_min: 0.2
+  loq_handling: "flag"  # options: flag | drop
+
+chemistry:
+  extraction_volume_ml: 1.0
+  dilution_factor: 1.0
+
+spectral:
+  wl_min_nm: 320
+  wl_max_nm: 480
+  wl_step_nm: 1
+  sg_window: 11
+  sg_polyorder: 3
+  subtract_blank_auc: true
+  baseline_method: "linear"  # options: linear | als
+
+modeling:
+  use_weighted_regression: true
+  weighting: "1/x"  # options: none | 1/x | 1/x2
+  kfold: 5
+  lod_multiplier: 3.3
+  loq_multiplier: 10.0
+
+qc:
+  calib_r2_min: 0.9
+  max_abs_rel_residual: 0.15
+  total_vs_parts_tolerance: 0.05
+  dad_vs_chrom_r2_min:
+    standards: 0.95
+    treatments: 0.90
+
+reflectance:
+  variant: "raw_normalized"
+  aggregate_angles: true
+  use_pseudo_absorbance: true
+  smooth_if_available: false
+
+reporting:
+  generate_markdown: true
+  generate_pdf: false
+  include_config_snapshot: true

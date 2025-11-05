@@ -1,0 +1,40 @@
+name: audit-agent4
+on:
+  pull_request:
+    types: [opened, synchronize, labeled, reopened]
+jobs:
+  audit:
+    if: contains(join(github.event.pull_request.labels.*.name, ','), 'A4')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scope check
+        run: |
+          BASE="${{ github.event.pull_request.base.ref }}"
+          HEAD="${{ github.event.pull_request.head.ref }}"
+          CHANGED=$(git diff --name-only origin/$BASE...origin/$HEAD || true)
+          BAD=$(echo "$CHANGED" | grep -vE '^(docs/media/|docs/.*/media\.md$|ops/output/media/|.github/|ops/auditors/|ops/agents/.*\.md$)' || true)
+          if [ -n "$BAD" ]; then echo "Out-of-scope:"; echo "$BAD"; exit 1; fi
+      - name: Validate media map
+        run: |
+          [ -f ops/output/media/media_map.csv ] || { echo "Missing ops/output/media/media_map.csv"; exit 1; }
+          python3 - <<'PY'
+import csv, sys
+req = ["asset_relpath","block","page","section","caption","alt_text","license","thumb_relpath","poster_relpath","claim_ids","priority"]
+with open("ops/output/media/media_map.csv", newline="") as fh:
+    r = csv.DictReader(fh)
+    miss = [c for c in req if c not in r.fieldnames]
+    if miss: print("Missing columns:", ", ".join(miss)); sys.exit(1)
+    missing_alt = 0; missing_cap = 0
+    for row in r:
+        if not row.get("alt_text"): missing_alt += 1
+        if not row.get("caption"): missing_cap += 1
+    if missing_alt or missing_cap:
+        print(f"Rows missing alt_text: {missing_alt}, captions: {missing_cap}")
+        sys.exit(1)
+print("A4 media map OK")
+PY
+      - name: Check derivatives
+        run: |
+          [ -d docs/media/thumbs ] || { echo "Missing docs/media/thumbs"; exit 1; }
+          [ -d docs/media/posters ] || { echo "Missing docs/media/posters"; exit 1; }
