@@ -102,6 +102,13 @@ GitHub will warn about three large artefacts that ship with the repo:
 They remain below the 100 MB hard limit, so pushes succeed. Use Git LFS if you
 prefer to offload them.
 
+## Contributing
+
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md)
+for details on how to submit pull requests, report issues, and contribute to the
+project. Make sure to review our [Code of Conduct](CODE_OF_CONDUCT.md) before
+participating.
+
 
 ## Questions
 
