@@ -9,16 +9,11 @@ This repository contains the complete audit trail and reproducible research mate
 ## Table of Contents
 
 - [About This Research](#about-this-research)
-- [Repository Structure](#repository-structure)
 - [Getting Started](#getting-started)
 - [Research Workflow](#research-workflow)
-  - [1. Hypothesis & Background](#1-hypothesis--background)
-  - [2. Data Collection](#2-data-collection)
-  - [3. Analysis Methods](#3-analysis-methods)
-  - [4. Results & Validation](#4-results--validation)
+- [Key Components](#key-components)
 - [Documentation](#documentation)
 - [For Contributors](#for-contributors)
-- [Technical Details](#technical-details)
 - [Citation](#citation)
 
 ---
@@ -35,86 +30,36 @@ This repository contains the complete audit trail and reproducible research mate
 
 ---
 
-## Repository Structure
-
-This repository is organized to support **complete reproducibility** of the research. All directories serve a specific purpose in the analysis pipeline:
-
-### Core Analysis Directories
-
-| Directory | Purpose | Key Contents |
-|-----------|---------|--------------|
-| **`src/`** | Analysis code | `chromatography/` - UPLC processing<br>`reflectance/` - Spectroscopy analysis<br>`mamba_ssm/` - ML denoising model |
-| **`notebooks/`** | Interactive analysis | Jupyter notebooks 00-09 (see [Research Workflow](#research-workflow))<br>Helper scripts for automation |
-| **`data/`** | Raw experimental data | Chromatogram exports, reflectance spectra, calibration logs |
-| **`data-processed/`** | Computed results | Outputs from analysis pipelines (`make reproduce`) |
-| **`tests/`** | Quality assurance | Unit tests for core modules, integration tests |
-
-### Documentation & Support
-
-| Directory | Purpose | Key Contents |
-|-----------|---------|--------------|
-| **`docs/`** | Research documentation | MkDocs site with methodology, claims verification |
-| **`models/`** | Pre-trained models | Mamba-SSM denoiser checkpoints (62 MB each) |
-| **`scaffold/`** | Output organization | Structured folders for generated figures and tables |
-| **`env/`** | Dependencies | Python requirements, setup configurations |
-
-### Reference & Operations
-
-| Directory | Purpose | Notes |
-|-----------|---------|-------|
-| **`external/`** | Legacy workspaces | Archived historical data (read-only) |
-| **`ops/`** | Operations & provenance | Resource maps, audit logs, workflow documentation |
-| **`claims/`** | Thesis claims | Individual claim verification files |
-
-### Configuration Files
-
-- **`Makefile`** - Automation: `make setup`, `make reproduce`, `make docs`, `make test`
-- **`mkdocs.yml`** - Documentation site structure
-- **`pytest.ini`** - Test configuration with custom markers
-- **`ruff.toml`** - Code linting and quality rules
-- **`CITATION.cff`** - Citation metadata for this repository
-
----
-
 ## Getting Started
 
-### Quick Start Commands
+### Quick Start (3 minutes)
 
 ```bash
-# 1. Set up the environment
-make setup        # Creates virtual environment and installs dependencies
-
-# 2. Run quick validation
-make quickstart   # Runs fast tests and sample pipelines
-
-# 3. Reproduce full analysis
-make reproduce    # Rebuilds all processed data from raw inputs
-
-# 4. Build documentation
-make docs         # Generates MkDocs site in ./site/
-
-# 5. Run all tests
-pytest tests -v   # Execute full test suite
-```
-
-### Installation
-
-**Prerequisites**: Python 3.11+, Git
-
-**Basic Setup** (for reviewing and testing):
-```bash
+# Clone and set up
 git clone https://github.com/MathewYoussef/scytonemin-thesis.git
 cd scytonemin-thesis
-make setup
+make setup        # Install dependencies
+
+# Verify everything works
+make quickstart   # Run quick tests and sample pipelines
 ```
 
-**Full Setup** (for running ML denoising - optional):
-```bash
-# After basic setup, install GPU dependencies
-pip install torch==2.3.0 torchvision==0.18.0 mamba-ssm[causal-conv1d]==2.2.5 tensorboard
-```
+### I Want To...
 
-**Note**: GPU dependencies are intentionally excluded from default requirements to avoid long CI build times.
+**📖 Understand the research**  
+→ Start with [Research Workflow](#research-workflow) below, then explore `notebooks/` starting with `00_env_and_schema.ipynb`
+
+**🔬 Reproduce the analysis**  
+→ Run `make reproduce` to rebuild all processed data from raw inputs (requires ~30 min)
+
+**📊 View results & figures**  
+→ Run `make docs` then open `site/index.html` in your browser
+
+**🧪 Run tests**  
+→ Run `pytest tests -v` to execute the full test suite (25 tests)
+
+**💻 Contribute code**  
+→ Read [CONTRIBUTING.md](CONTRIBUTING.md) for development workflow
 
 ---
 
@@ -122,188 +67,204 @@ pip install torch==2.3.0 torchvision==0.18.0 mamba-ssm[causal-conv1d]==2.2.5 ten
 
 This section describes the chronological flow of the research from hypothesis to validation.
 
-### 1. Hypothesis & Background
+### 1️⃣ Hypothesis & Background
 
-**Core Hypothesis**: Reflectance spectroscopy can quantify scytonemin non-destructively with accuracy comparable to established chromatographic methods.
+**Core Question**: Can we measure scytonemin non-destructively?
 
-**Theoretical Foundation**:
-- Scytonemin exhibits characteristic absorption in UV-visible range (320-480 nm)
-- Optical remote sensing (ORS) successfully used in planetary science for mineral detection
-- Machine learning can denoise spectra while preserving biologically relevant features
+**Theory**: Scytonemin absorbs strongly in the UV-visible range (320-480 nm). By measuring reflectance spectra and applying machine learning denoising, we should be able to quantify concentration without destroying the sample.
 
-**Documented in**:
-- `docs/index.md` - Research overview
-- `docs/claims/` - Individual claim verification
-- `notebooks/00_env_and_schema.ipynb` - Experimental setup documentation
+**Start here**: `notebooks/00_env_and_schema.ipynb` - Documents experimental setup
 
-### 2. Data Collection
+### 2️⃣ Data Collection
 
-**Experimental Design**:
-- Cyanobacterial cultures exposed to 6 UV dose levels (0 to ~3.2 mW/cm² UVA)
-- Multiple measurement modalities for cross-validation:
-  - **UPLC Chromatography** - Gold standard quantification
-  - **Diode Array Detection (DAD)** - Alternative chromatographic method
-  - **Reflectance Spectroscopy** - Non-destructive optical measurement
+**Experiment**: Cyanobacterial cultures exposed to 6 UV dose levels (0 to 3.2 mW/cm²)
 
-**Raw Data Location**:
-- `data/` - Raw instrument exports
-  - Chromatogram files
-  - Reflectance spectra (320-700 nm)
-  - UV dosimetry logs
-- `data-sample/` - Example datasets for quick testing
+**Three measurement methods for cross-validation**:
+- 🥇 **UPLC Chromatography** - Gold standard (destructive)
+- 🔬 **Diode Array Detection** - Alternative chromatography
+- 📡 **Reflectance Spectroscopy** - Non-destructive (our innovation!)
 
-**Quality Control**:
-- Checksums for all raw data (`CHECKSUMS.sha256` in each folder)
-- Dark/white reference calibrations
-- Replicate measurements for precision estimation
+**Raw data**: See `data/` directory  
+**Quality checks**: `notebooks/01_dosimetry_mdv_benchmark.ipynb`
 
-**Documented in**:
-- `notebooks/01_dosimetry_mdv_benchmark.ipynb` - UV dose verification
-- `notebooks/03_spectra_ingest_and_rel_reflectance.ipynb` - Data ingestion
+### 3️⃣ Analysis Methods
 
-### 3. Analysis Methods
+The analysis happens in **5 stages** (A through E):
 
-The analysis pipeline consists of multiple stages, each with dedicated code and notebooks:
+**Stage A/B**: Chromatography Calibration  
+→ Code: `src/chromatography/`  
+→ Notebook: `06_uplc_processing_and_calibration.ipynb`  
+→ Output: Standard concentrations in mg/gDW
 
-#### Stage A/B: Chromatography Calibration
-- **Purpose**: Establish concentration standards from chromatography
-- **Code**: `src/chromatography/`
-- **Notebooks**: `06_uplc_processing_and_calibration.ipynb`
-- **Methods**: Weighted linear regression (1/x weighting), trimmed mean aggregation
-- **Output**: Calibrated concentrations in mg/gDW (milligrams per gram dry weight)
+**Stage C**: Reflectance Processing  
+→ Code: `src/reflectance/`  
+→ Notebook: `03_spectra_ingest_and_rel_reflectance.ipynb`  
+→ Output: Clean reflectance spectra
 
-#### Stage C: Reflectance Processing
-- **Purpose**: Convert raw spectra to relative reflectance
-- **Code**: `src/reflectance/`
-- **Notebooks**: `03_spectra_ingest_and_rel_reflectance.ipynb`
-- **Methods**: Dark/white normalization, continuum removal, occupancy calculation
+**Stage D**: ML Denoising (Mamba-SSM)  
+→ Code: `src/mamba_ssm/`  
+→ Notebook: `04_mamba_denoising_QC.ipynb`  
+→ Output: Denoised spectra (pre-trained model included)
 
-#### Stage D: ML Denoising (Mamba-SSM)
-- **Purpose**: Denoise reflectance spectra while preserving UV absorption features
-- **Code**: `src/mamba_ssm/`
-- **Notebooks**: `04_mamba_denoising_QC.ipynb`
-- **Methods**: State-space model (Mamba) trained on validation panel
-- **Model**: Pre-trained checkpoints in `models/mamba_ssm/`
+**Stage E**: Concentration Mapping  
+→ Notebooks: `05_continuum_removal_and_occupancy.ipynb`, `08_reflectance_to_concentration_mapping.ipynb`  
+→ Output: Spectral features → concentration prediction
 
-#### Stage E: Occupancy & Concentration Mapping
-- **Purpose**: Map spectral features to scytonemin concentration
-- **Code**: Combined in reflectance and analysis modules
-- **Notebooks**: 
-  - `05_continuum_removal_and_occupancy.ipynb` - Feature extraction
-  - `08_reflectance_to_concentration_mapping.ipynb` - Linear mapping
-- **Methods**: Integration over 320-480 nm and 360-410 nm windows
+### 4️⃣ Results & Validation
 
-**Documented in**: Each notebook contains detailed methodology with inline citations.
+**Cross-validation**: Compare all three measurement methods  
+→ Notebook: `07_concentration_profiles_and_cross_assay.ipynb`
 
-### 4. Results & Validation
+**Geometric effects**: Test viewing angle limitations  
+→ Notebook: `09_geometry_and_orientation_effects.ipynb`
 
-#### Cross-Assay Validation
-- **Comparison**: Chromatography vs DAD vs Reflectance
-- **Statistical Methods**: Deming regression, trimmed means, confidence intervals
-- **Notebook**: `07_concentration_profiles_and_cross_assay.ipynb`
+**Quality metrics**: R², SNR improvement, residual analysis  
+→ See individual notebooks and `docs/claims/`
 
-#### Geometric Effects
-- **Analysis**: BRDF (bidirectional reflectance) limitations across viewing angles
-- **Notebook**: `09_geometry_and_orientation_effects.ipynb`
+---
 
-#### Quality Metrics
-- **SNR improvement**: Quantified in denoising QC
-- **Prediction accuracy**: R² and residual analysis
-- **Reproducibility**: All analyses automated via `make reproduce`
+## Key Components
 
-#### Claims Verification
-- Each thesis claim mapped to:
-  - Specific notebook cell
-  - Generated figure/table
-  - Automated test (where applicable)
-- See `docs/claims/` for claim-by-claim evidence
+### Where Things Live
+
+**Analysis Code** → `src/`  
+Python modules for chromatography, reflectance, and ML denoising
+
+**Interactive Notebooks** → `notebooks/`  
+9 Jupyter notebooks documenting each analysis step (numbered 00-09)
+
+**Experimental Data** → `data/`  
+Raw instrument outputs (chromatograms, spectra, calibration logs)
+
+**Generated Results** → `data-processed/`  
+Outputs from running `make reproduce`
+
+**Tests** → `tests/`  
+Unit tests ensuring correctness (run with `pytest`)
+
+**Documentation Site** → `docs/`  
+Detailed methodology (build with `make docs`)
+
+**Pre-trained Model** → `models/mamba_ssm/`  
+ML denoiser checkpoints (no training needed)
+
+<details>
+<summary><b>📁 Complete Directory Reference</b> (click to expand)</summary>
+
+| Directory | Purpose |
+|-----------|---------|
+| `src/chromatography/` | UPLC processing code |
+| `src/reflectance/` | Spectroscopy analysis code |
+| `src/mamba_ssm/` | ML denoising model |
+| `notebooks/` | Jupyter analysis walkthroughs |
+| `data/` | Raw experimental data |
+| `data-processed/` | Generated analysis outputs |
+| `data-sample/` | Small sample datasets for testing |
+| `tests/` | Unit & integration tests |
+| `docs/` | MkDocs documentation site |
+| `models/` | Pre-trained model weights |
+| `scaffold/` | Output folders for figures/tables |
+| `env/` | Python dependencies |
+| `external/` | Legacy/archived workspaces (read-only) |
+| `ops/` | Operations, resource maps, audit logs |
+| `claims/` | Individual thesis claim verifications |
+
+**Configuration files**: `Makefile`, `pytest.ini`, `ruff.toml`, `mkdocs.yml`, `CITATION.cff`
+
+</details>
 
 ---
 
 ## Documentation
 
-### Interactive Notebooks
+### Sequential Notebook Walkthrough
 
-Sequential walkthrough of the analysis (start here for understanding the research):
+Follow these notebooks in order to understand the complete analysis:
 
-| Notebook | Topic | Purpose |
-|----------|-------|---------|
-| `00_env_and_schema.ipynb` | Environment setup | Package versions, data schemas, git hashes |
-| `01_dosimetry_mdv_benchmark.ipynb` | UV dosimetry | Dose calculations and %MDV verification |
-| `03_spectra_ingest_and_rel_reflectance.ipynb` | Data ingestion | Raw to relative reflectance conversion |
-| `04_mamba_denoising_QC.ipynb` | ML denoising | Quality control for Mamba-SSM outputs |
-| `05_continuum_removal_and_occupancy.ipynb` | Feature extraction | Continuum removal, occupancy windows |
-| `06_uplc_processing_and_calibration.ipynb` | Chromatography | UPLC calibration and concentration derivation |
-| `07_concentration_profiles_and_cross_assay.ipynb` | Cross-validation | Dose-response curves, Deming regression |
-| `08_reflectance_to_concentration_mapping.ipynb` | Main result | Spectral occupancy → concentration mapping |
-| `09_geometry_and_orientation_effects.ipynb` | BRDF analysis | Viewing angle effects and limitations |
+| # | Notebook | What You'll Learn |
+|---|----------|-------------------|
+| 00 | `env_and_schema.ipynb` | Package versions, data schemas, setup |
+| 01 | `dosimetry_mdv_benchmark.ipynb` | UV dose calculations |
+| 03 | `spectra_ingest_and_rel_reflectance.ipynb` | Raw → clean spectra |
+| 04 | `mamba_denoising_QC.ipynb` | ML denoising quality control |
+| 05 | `continuum_removal_and_occupancy.ipynb` | Feature extraction |
+| 06 | `uplc_processing_and_calibration.ipynb` | Chromatography calibration |
+| 07 | `concentration_profiles_and_cross_assay.ipynb` | Cross-method validation |
+| 08 | `reflectance_to_concentration_mapping.ipynb` | **Main result**: spectra → concentration |
+| 09 | `geometry_and_orientation_effects.ipynb` | Viewing angle effects |
 
-### MkDocs Site
+### Documentation Website
 
-Comprehensive documentation site (build with `make docs`):
+Build and view the full documentation site:
 
-- **Home** (`docs/index.md`) - Audit hub overview
-- **Claims** (`docs/claims/`) - Thesis claim verification
-- **Methods** - Detailed methodology for each analysis block:
-  - Initial Calibration
-  - Reflectance Processing
-  - Mamba-SSM Denoising
-  - Cross-Assay Validation
+```bash
+make docs           # Build with MkDocs
+mkdocs serve        # View at http://localhost:8000
+```
 
-View locally: `mkdocs serve` then open `http://localhost:8000`
+The site includes:
+- Detailed methodology for each analysis stage
+- Individual thesis claim verifications
+- Data provenance documentation
 
 ---
 
 ## For Contributors
 
-We welcome contributions! This repository supports:
+### How to Contribute
 
-- **Reviewers**: Audit reproducibility, verify claims
-- **Researchers**: Extend methods, apply to new datasets
-- **Developers**: Improve code quality, add tests
+1. **Read the guidelines**: [CONTRIBUTING.md](CONTRIBUTING.md)
+2. **Follow the code of conduct**: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+3. **Use issue templates** for bug reports or feature requests
+4. **Submit pull requests** following the PR template
 
-### Contribution Guidelines
+### Development Workflow
 
-Please read **[CONTRIBUTING.md](CONTRIBUTING.md)** for:
-- Development workflow
-- Testing requirements
-- Code style guidelines
-- Pull request process
+```bash
+# Set up development environment
+make setup
 
-### Code of Conduct
+# Run tests before making changes
+pytest tests -v
 
-All contributors must follow our **[Code of Conduct](CODE_OF_CONDUCT.md)**.
+# Make your changes, then test again
+pytest tests -v
 
-### Issue Templates
+# Check code quality
+ruff check src/
 
-Use GitHub issue templates for:
-- **Bug reports** - Report issues with reproducibility
-- **Feature requests** - Suggest enhancements
-- **Questions** - Ask via GitHub Discussions
+# Build docs to verify
+make docs
+```
+
+### Running Tests
+
+```bash
+pytest tests -v              # All tests
+pytest tests -m quick        # Quick tests only (for CI)
+pytest --cov=src             # With coverage report
+```
 
 ---
 
 ## Technical Details
 
-### Continuous Integration
+<details>
+<summary><b>🔧 CI/CD Pipeline</b> (click to expand)</summary>
 
-`.github/workflows/ci-audit.yml` runs on every push/PR:
+The GitHub Actions workflow (`.github/workflows/ci-audit.yml`) runs on every push:
 
 1. Python 3.11 environment setup
-2. Dependency installation (CPU-only stack)
-3. Linting with ruff
+2. Dependency installation
+3. Code linting with ruff
 4. Quick tests (`pytest -m quick`)
 5. Test coverage reporting
-6. Documentation build (`mkdocs build`)
+6. Documentation build
 
-### Data Provenance
+</details>
 
-- **Checksums**: SHA-256 manifests for all raw data
-- **Version Control**: Git tracks all code and configuration
-- **Resource Maps**: `ops/output/` documents data lineage
-- **Automated Tests**: Validate data integrity and analysis correctness
-
-### Large Files
+<details>
+<summary><b>📦 Large Files</b> (click to expand)</summary>
 
 Three files exceed 50 MB (all below 100 MB GitHub limit):
 
@@ -311,20 +272,17 @@ Three files exceed 50 MB (all below 100 MB GitHub limit):
 - `models/mamba_ssm/checkpoints/god_run/mamba_tiny_uv_best.pt` (~62 MB)
 - `models/mamba_ssm/prod/Track_H_fold_02/mamba_tiny_uv_best.pt` (~62 MB)
 
-Optional: Use Git LFS for these files if preferred.
+</details>
 
-### Testing
+<details>
+<summary><b>🔐 Data Provenance</b> (click to expand)</summary>
 
-```bash
-# Run all tests
-pytest tests -v
+- **Checksums**: SHA-256 manifests for all raw data
+- **Version Control**: Git tracks all code and configuration
+- **Resource Maps**: `ops/output/` documents data lineage
+- **Automated Tests**: Validate data integrity and analysis correctness
 
-# Run only quick tests (used in CI)
-pytest tests -m quick
-
-# Run with coverage
-pytest tests --cov=src --cov-report=html
-```
+</details>
 
 ---
 
@@ -347,12 +305,12 @@ See `CITATION.cff` for machine-readable citation metadata.
 
 ## Questions & Support
 
-- **Issues**: Report bugs or request features via GitHub Issues
-- **Discussions**: Ask questions via GitHub Discussions
-- **Email**: For private inquiries, contact the maintainer
+- 🐛 **Bug reports**: Use GitHub Issues with the bug report template
+- 💡 **Feature requests**: Use GitHub Issues with the feature request template
+- 💬 **Questions**: Start a GitHub Discussion
+- 📧 **Private inquiries**: Contact the maintainer
 
 ---
 
-**License**: See [LICENSE](LICENSE) file for details.
-
+**License**: See [LICENSE](LICENSE) file  
 **Last Updated**: 2026-01-24
