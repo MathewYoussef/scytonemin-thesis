@@ -1,0 +1,28 @@
+# Ruff configuration for scytonemin-thesis
+
+# Maximum line length (for reference)
+line-length = 100
+
+[lint]
+# Enable pycodestyle (E), pyflakes (F), and isort (I)
+select = ["E", "F", "I"]
+
+# Ignore line length violations (E501) - scientific code often has long lines
+ignore = ["E501"]
+
+# Exclude common directories
+exclude = [
+    ".git",
+    ".pytest_cache",
+    "__pycache__",
+    "build",
+    "dist",
+    "env",
+    "venv",
+    ".venv",
+    "site",
+]
+
+[format]
+# Use double quotes for strings
+quote-style = "double"
