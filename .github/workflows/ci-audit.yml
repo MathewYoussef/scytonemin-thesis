@@ -18,9 +18,21 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r env/requirements.txt
-      - name: Run quick tests
+          pip install pytest-cov ruff
+      - name: Lint with ruff
         run: |
-          pytest tests -m "quick" --maxfail=1
+          ruff check src/ --select E,F,I --ignore E501
+        continue-on-error: true
+      - name: Run quick tests with coverage
+        run: |
+          pytest tests -m "quick" --maxfail=1 --cov=src --cov-report=term --cov-report=html
+      - name: Upload coverage report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage-report
+          path: htmlcov/
+          retention-days: 30
       - name: Build docs
         run: |
           mkdocs build -q
