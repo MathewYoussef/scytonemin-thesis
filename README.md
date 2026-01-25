@@ -1,108 +1,316 @@
 # Scytonemin Thesis Audit Repository
 
-This repository packages **all supplementary material** needed to review the
-Scytonemin thesis: raw instrument exports, processed tables, documentation,
-automation scripts, and reviewer notebooks. Everything required to rebuild the
-audit hub locally is tracked here so reviewers can reproduce the artefacts and
-browse the MkDocs site without chasing external resources.
+[![CI Status](https://github.com/MathewYoussef/scytonemin-thesis/workflows/CI%20Audit/badge.svg)](https://github.com/MathewYoussef/scytonemin-thesis/actions)
+
+This repository contains the complete audit trail and reproducible research materials for a thesis on **scytonemin biosynthesis and optical remote sensing in cyanobacteria**.
 
 ---
 
-## Repository Layout
+## Table of Contents
 
-| Path | What lives here |
-| --- | --- |
-| `data/raw/**` | Canonical raw inputs (chromatograms, diode-array spectra, denoised reflectance, UV calibration logs). Each folder has a README plus `CHECKSUMS.sha256`. |
-| `data/reference/**` | Regenerated canonical tables/configs ready for notebooks (calibration JSON, reflectance canonical dataset, validation manifests, etc.). |
-| `data-processed/**` | Outputs produced by `make reproduce` (dose summaries, validation-panel counts, UV schedules). |
-| `models/mamba_ssm/` | Shipped Mamba checkpoints plus checksums. Training is **not** rerun; we provide the production weights. |
-| `ops/` | Resource maps, auditor workflows, and provenance logs lifted from the legacy workspaces. |
-| `notebooks/` | Reviewer walkthroughs (00–09) and CLI helpers (`run_full_pipeline.py`, `run_samples.py`, `render_figures.py`). |
-| `scaffold/**` | Destination folders for figures/tables embedded in MkDocs pages; each block owns a `figures/`, `tables/`, `notebooks/`, and `assets/` subfolder. |
-| `docs/` | MkDocs site powering the public audit hub. |
-| `external/workspaces/**` | Immutable snapshots of the legacy environments Agent 1 catalogued. Treat these as read-only references. |
+- [About This Research](#about-this-research)
+- [Getting Started](#getting-started)
+- [Research Workflow](#research-workflow)
+- [Key Components](#key-components)
+- [Documentation](#documentation)
+- [For Contributors](#for-contributors)
+- [Citation](#citation)
 
+---
 
-## Quick Start
+## About This Research
 
-```bash
-make setup        # create .venv and install lightweight dependencies
-make reproduce    # rebuild calibration + reflectance outputs (Stage A/B + canonical builder)
-make docs         # build the MkDocs site into ./site/
-make quickstart   # (optional) run fast pytest markers + sample pipelines
-```
+**Research Question**: Can optical reflectance spectroscopy be used to non-invasively quantify scytonemin concentrations in cyanobacterial cultures?
 
-- `make reproduce` re-executes Stage A/B chromatogram calibrations and the
-  reflectance canonical builder. The Act-of-God denoiser is **not** rerun—we ship
-  the denoised spectra and evaluation artefacts under `data/reference/mamba_ssm/`.
-- `make docs` now includes `mkdocs-material` in the shared requirements so CI and
-  local builds use the same theme stack.
+**Background**: Scytonemin is a UV-protective pigment produced by cyanobacteria in response to radiation stress. Traditional quantification methods (HPLC, chromatography) are destructive and time-consuming. This research explores using optical remote sensing techniques—similar to those used in planetary geology—to measure scytonemin concentration through reflectance spectroscopy.
 
+**Key Innovation**: Development of a machine learning denoising pipeline (Mamba-SSM) to process noisy reflectance spectra, combined with multi-assay validation (chromatography, diode-array detection) to establish robust concentration mapping.
 
-## Optional Heavy Dependencies
+**Practical Impact**: Non-destructive monitoring of UV stress response in cyanobacteria for astrobiology, bioproduction, and environmental sensing applications.
 
-CI and the notebooks run with CPU-only packages. If you want to experiment with
-the denoiser yourself, install the GPU stack manually:
+---
+
+## Getting Started
+
+### Quick Start (3 minutes)
 
 ```bash
-pip install torch==2.3.0 torchvision==0.18.0 mamba-ssm[causal-conv1d]==2.2.5 tensorboard
+# Clone and set up
+git clone https://github.com/MathewYoussef/scytonemin-thesis.git
+cd scytonemin-thesis
+make setup        # Install dependencies
+
+# Verify everything works
+make quickstart   # Run quick tests and sample pipelines
 ```
 
-These packages are intentionally absent from `env/requirements.txt` so GitHub
-runners are not forced to build CUDA wheels on every audit run.
+### I Want To...
 
+**Understand the research**  
+→ Start with [Research Workflow](#research-workflow) below, then explore `notebooks/` starting with `00_env_and_schema.ipynb`
 
-## Notebooks & Automation
+**Reproduce the analysis**  
+→ Run `make reproduce` to rebuild all processed data from raw inputs (requires ~30 min)
 
-| Notebook | Purpose |
-| --- | --- |
-| `00_env_and_schema.ipynb` | Capture package versions, dataset schemas, and git hashes before analysis. |
-| `01_dosimetry_mdv_benchmark.ipynb` | Recompute UVA/UVB dose schedules and verify %MDV mappings. |
-| `04_mamba_denoising_QC.ipynb` | Inspect the shipped denoised spectra and reproduce readiness-gate pass/fail tallies. |
-| `05_continuum_removal_and_occupancy.ipynb` | Demonstrate continuum removal, quadratic bowl fitting, and occupancy calculations. |
-| `06_uplc_processing_and_calibration.ipynb` | Replay Stage A/B fits and derive dry-weight concentrations. |
-| `07_concentration_profiles_and_cross_assay.ipynb` | Summarise dose-response behaviour and run Deming regression between assays. |
-| `08_reflectance_to_concentration_mapping.ipynb` | Map Σ occupancy to Chrom_total (mg·gDW⁻¹) and expose a prediction helper. |
-| `09_geometry_and_orientation_effects.ipynb` | Compare fits by viewing angle and discuss BRDF limitations. |
+**View results & figures**  
+→ Run `make docs` then open `site/index.html` in your browser
 
-Automation scripts under `notebooks/` dispatch into the modules in `src/` and
-mirror what CI executes.
+**Run tests**  
+→ Run `pytest tests -v` to execute the full test suite (25 tests)
 
+**Contribute code**  
+→ Read [CONTRIBUTING.md](CONTRIBUTING.md) for development workflow
 
-## Data & Provenance
+---
 
-- **Checksums** – Every folder under `data/raw/**`, `data/reference/**`, and
-  `models/**` ships with a checksum manifest. Regenerate them whenever you update
-  artefacts via the pipelines.
-- **Resource maps** – See `ops/output/data/uplc_resource_map.md` and related notes
-  for how the legacy workspaces map into this repository.
-- **Snapshots** – Everything under `external/workspaces/**` is archival and kept
-  out of the pipelines. Do not commit changes there.
+## Research Workflow
 
+This section describes the chronological flow of the research from hypothesis to validation.
 
-## Continuous Integration
+### 1. Hypothesis & Background
 
-`.github/workflows/ci-audit.yml` runs on every push/PR to `main` and verifies:
+**Core Question**: Can we measure scytonemin non-destructively?
 
-1. Python 3.11 environment + dependency installation (CPU-only stack)
-2. Quick pytest markers (`-m quick`)
-3. `mkdocs build`
+**Theory**: Scytonemin absorbs strongly in the UV-visible range (320-480 nm). By measuring reflectance spectra and applying machine learning denoising, we should be able to quantify concentration without destroying the sample.
 
-Use GitHub Actions’ “Re-run jobs” button if you update pipelines or dependencies.
+**Start here**: `notebooks/00_env_and_schema.ipynb` - Documents experimental setup
 
+### 2. Data Collection
 
-## Large Files
+**Experiment**: Cyanobacterial cultures exposed to 6 UV dose levels (0 to 3.2 mW/cm²)
 
-GitHub will warn about three large artefacts that ship with the repo:
+**Three measurement methods for cross-validation**:
+- **UPLC Chromatography** - Gold standard (destructive)
+- **Diode Array Detection** - Alternative chromatography
+- **Reflectance Spectroscopy** - Non-destructive (our innovation!)
 
-- `data/reference/mamba_ssm/denoised_full_run.csv` (~59 MB)
-- `models/mamba_ssm/checkpoints/god_run/mamba_tiny_uv_best.pt` (~62 MB)
-- `models/mamba_ssm/prod/Track_H_fold_02/mamba_tiny_uv_best.pt` (~62 MB)
+**Raw data**: See `data/` directory  
+**Quality checks**: `notebooks/01_dosimetry_mdv_benchmark.ipynb`
 
-They remain below the 100 MB hard limit, so pushes succeed. Use Git LFS if you
-prefer to offload them.
+### 3. Analysis Methods
 
+The analysis happens in **5 stages** (A through E):
 
-## Questions
+**Stage A/B**: Chromatography Calibration  
+→ Code: `src/chromatography/`  
+→ Notebook: `06_uplc_processing_and_calibration.ipynb`  
+→ Output: Standard concentrations in mg/gDW
 
-Open an issue or start a discussion if you need additional guidance. Happy auditing!
+**Stage C**: Reflectance Processing  
+→ Code: `src/reflectance/`  
+→ Notebook: `03_spectra_ingest_and_rel_reflectance.ipynb`  
+→ Output: Clean reflectance spectra
+
+**Stage D**: ML Denoising (Mamba-SSM)  
+→ Code: `src/mamba_ssm/`  
+→ Notebook: `04_mamba_denoising_QC.ipynb`  
+→ Output: Denoised spectra (pre-trained model included)
+
+**Stage E**: Concentration Mapping  
+→ Notebooks: `05_continuum_removal_and_occupancy.ipynb`, `08_reflectance_to_concentration_mapping.ipynb`  
+→ Output: Spectral features → concentration prediction
+
+### 4. Results & Validation
+
+**Cross-validation**: Compare all three measurement methods  
+→ Notebook: `07_concentration_profiles_and_cross_assay.ipynb`
+
+**Geometric effects**: Test viewing angle limitations  
+→ Notebook: `09_geometry_and_orientation_effects.ipynb`
+
+**Quality metrics**: R², SNR improvement, residual analysis  
+→ See individual notebooks and `docs/claims/`
+
+---
+
+## Key Components
+
+### Where Things Live
+
+**Analysis Code** → `src/`  
+Python modules for chromatography, reflectance, and ML denoising
+
+**Interactive Notebooks** → `notebooks/`  
+9 Jupyter notebooks documenting each analysis step (numbered 00-09)
+
+**Experimental Data** → `data/`  
+Raw instrument outputs (chromatograms, spectra, calibration logs)
+
+**Generated Results** → `data-processed/`  
+Outputs from running `make reproduce`
+
+**Tests** → `tests/`  
+Unit tests ensuring correctness (run with `pytest`)
+
+**Documentation Site** → `docs/`  
+Detailed methodology (build with `make docs`)
+
+**Pre-trained Model** → `models/mamba_ssm/`  
+ML denoiser checkpoints (no training needed)
+
+<details>
+<summary><b>📁 Complete Directory Reference</b> (click to expand)</summary>
+
+| Directory | Purpose |
+|-----------|---------|
+| `src/chromatography/` | UPLC processing code |
+| `src/reflectance/` | Spectroscopy analysis code |
+| `src/mamba_ssm/` | ML denoising model |
+| `notebooks/` | Jupyter analysis walkthroughs |
+| `data/` | Raw experimental data |
+| `data-processed/` | Generated analysis outputs |
+| `data-sample/` | Small sample datasets for testing |
+| `tests/` | Unit & integration tests |
+| `docs/` | MkDocs documentation site |
+| `models/` | Pre-trained model weights |
+| `scaffold/` | Output folders for figures/tables |
+| `env/` | Python dependencies |
+| `external/` | Legacy/archived workspaces (read-only) |
+| `ops/` | Operations, resource maps, audit logs |
+| `claims/` | Individual thesis claim verifications |
+
+**Configuration files**: `Makefile`, `pytest.ini`, `ruff.toml`, `mkdocs.yml`, `CITATION.cff`
+
+</details>
+
+---
+
+## Documentation
+
+### Sequential Notebook Walkthrough
+
+Follow these notebooks in order to understand the complete analysis:
+
+| # | Notebook | What You'll Learn |
+|---|----------|-------------------|
+| 00 | `env_and_schema.ipynb` | Package versions, data schemas, setup |
+| 01 | `dosimetry_mdv_benchmark.ipynb` | UV dose calculations |
+| 03 | `spectra_ingest_and_rel_reflectance.ipynb` | Raw → clean spectra |
+| 04 | `mamba_denoising_QC.ipynb` | ML denoising quality control |
+| 05 | `continuum_removal_and_occupancy.ipynb` | Feature extraction |
+| 06 | `uplc_processing_and_calibration.ipynb` | Chromatography calibration |
+| 07 | `concentration_profiles_and_cross_assay.ipynb` | Cross-method validation |
+| 08 | `reflectance_to_concentration_mapping.ipynb` | **Main result**: spectra → concentration |
+| 09 | `geometry_and_orientation_effects.ipynb` | Viewing angle effects |
+
+### Documentation Website
+
+Build and view the full documentation site:
+
+```bash
+make docs           # Build with MkDocs
+mkdocs serve        # View at http://localhost:8000
+```
+
+The site includes:
+- Detailed methodology for each analysis stage
+- Individual thesis claim verifications
+- Data provenance documentation
+
+---
+
+## For Contributors
+
+### How to Contribute
+
+1. **Read the guidelines**: [CONTRIBUTING.md](CONTRIBUTING.md)
+2. **Follow the code of conduct**: [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)
+3. **Use issue templates** for bug reports or feature requests
+4. **Submit pull requests** following the PR template
+
+### Development Workflow
+
+```bash
+# Set up development environment
+make setup
+
+# Run tests before making changes
+pytest tests -v
+
+# Make your changes, then test again
+pytest tests -v
+
+# Check code quality
+ruff check src/
+
+# Build docs to verify
+make docs
+```
+
+### Running Tests
+
+```bash
+pytest tests -v              # All tests
+pytest tests -m quick        # Quick tests only (for CI)
+pytest --cov=src             # With coverage report
+```
+
+---
+
+## Technical Details
+
+<details>
+<summary><b>🔧 CI/CD Pipeline</b> (click to expand)</summary>
+
+The GitHub Actions workflow (`.github/workflows/ci-audit.yml`) runs on every push:
+
+1. Python 3.11 environment setup
+2. Dependency installation
+3. Code linting with ruff
+4. Quick tests (`pytest -m quick`)
+5. Test coverage reporting
+6. Documentation build
+
+</details>
+
+<details>
+<summary><b>📦 Large Files</b> (click to expand)</summary>
+
+Three files exceed 50 MB (all below 100 MB GitHub limit):
+
+- `data/reference/mamba_ssm/denoised_full_run.csv` (~59 MB)
+- `models/mamba_ssm/checkpoints/god_run/mamba_tiny_uv_best.pt` (~62 MB)
+- `models/mamba_ssm/prod/Track_H_fold_02/mamba_tiny_uv_best.pt` (~62 MB)
+
+</details>
+
+<details>
+<summary><b>🔐 Data Provenance</b> (click to expand)</summary>
+
+- **Checksums**: SHA-256 manifests for all raw data
+- **Version Control**: Git tracks all code and configuration
+- **Resource Maps**: `ops/output/` documents data lineage
+- **Automated Tests**: Validate data integrity and analysis correctness
+
+</details>
+
+---
+
+## Citation
+
+If you use this repository or build upon this research, please cite:
+
+```bibtex
+@software{scytonemin_thesis,
+  author = {Youssef, Mathew},
+  title = {Scytonemin Thesis Audit Hub},
+  year = {2025},
+  url = {https://github.com/MathewYoussef/scytonemin-thesis}
+}
+```
+
+See `CITATION.cff` for machine-readable citation metadata.
+
+---
+
+## Questions & Support
+
+- **Bug reports**: Use GitHub Issues with the bug report template
+- **Feature requests**: Use GitHub Issues with the feature request template
+- **Questions**: Start a GitHub Discussion
+- **Private inquiries**: Contact the maintainer
+
+---
+
+**License**: See [LICENSE](LICENSE) file  
+**Last Updated**: 2026-01-24

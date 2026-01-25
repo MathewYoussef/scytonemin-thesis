@@ -47,15 +47,42 @@ def parse_args() -> argparse.Namespace:
 
 
 def load_config(path: Path) -> dict:
+    """
+    Load YAML configuration file.
+
+    Args:
+        path: Path to the YAML configuration file
+
+    Returns:
+        Dictionary containing the parsed configuration
+    """
     with path.open("r", encoding="utf-8") as fh:
         return yaml.safe_load(fh)
 
 
 def ensure_directory(path: Path) -> None:
+    """
+    Create directory and any necessary parent directories.
+
+    Args:
+        path: Directory path to create
+    """
     path.mkdir(parents=True, exist_ok=True)
 
 
 def read_standard_table(path: Path) -> dict[int, float]:
+    """
+    Read calibration standard table from CSV file.
+
+    Args:
+        path: Path to CSV file containing standard_level and concentration_mg_ml columns
+
+    Returns:
+        Dictionary mapping standard level (int) to concentration (float)
+
+    Raises:
+        ValueError: If required columns are missing or no valid rows found
+    """
     df = pd.read_csv(path)
     if "standard_level" not in df or "concentration_mg_ml" not in df:
         raise ValueError(f"Standard table {path} must have columns standard_level, concentration_mg_ml")
