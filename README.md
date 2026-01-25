@@ -46,19 +46,19 @@ make quickstart   # Run quick tests and sample pipelines
 
 ### I Want To...
 
-**📖 Understand the research**  
+**Understand the research**  
 → Start with [Research Workflow](#research-workflow) below, then explore `notebooks/` starting with `00_env_and_schema.ipynb`
 
-**🔬 Reproduce the analysis**  
+**Reproduce the analysis**  
 → Run `make reproduce` to rebuild all processed data from raw inputs (requires ~30 min)
 
-**📊 View results & figures**  
+**View results & figures**  
 → Run `make docs` then open `site/index.html` in your browser
 
-**🧪 Run tests**  
+**Run tests**  
 → Run `pytest tests -v` to execute the full test suite (25 tests)
 
-**💻 Contribute code**  
+**Contribute code**  
 → Read [CONTRIBUTING.md](CONTRIBUTING.md) for development workflow
 
 ---
@@ -67,7 +67,7 @@ make quickstart   # Run quick tests and sample pipelines
 
 This section describes the chronological flow of the research from hypothesis to validation.
 
-### 1️⃣ Hypothesis & Background
+### 1. Hypothesis & Background
 
 **Core Question**: Can we measure scytonemin non-destructively?
 
@@ -75,19 +75,19 @@ This section describes the chronological flow of the research from hypothesis to
 
 **Start here**: `notebooks/00_env_and_schema.ipynb` - Documents experimental setup
 
-### 2️⃣ Data Collection
+### 2. Data Collection
 
 **Experiment**: Cyanobacterial cultures exposed to 6 UV dose levels (0 to 3.2 mW/cm²)
 
 **Three measurement methods for cross-validation**:
-- 🥇 **UPLC Chromatography** - Gold standard (destructive)
-- 🔬 **Diode Array Detection** - Alternative chromatography
-- 📡 **Reflectance Spectroscopy** - Non-destructive (our innovation!)
+- **UPLC Chromatography** - Gold standard (destructive)
+- **Diode Array Detection** - Alternative chromatography
+- **Reflectance Spectroscopy** - Non-destructive (our innovation!)
 
 **Raw data**: See `data/` directory  
 **Quality checks**: `notebooks/01_dosimetry_mdv_benchmark.ipynb`
 
-### 3️⃣ Analysis Methods
+### 3. Analysis Methods
 
 The analysis happens in **5 stages** (A through E):
 
@@ -110,7 +110,7 @@ The analysis happens in **5 stages** (A through E):
 → Notebooks: `05_continuum_removal_and_occupancy.ipynb`, `08_reflectance_to_concentration_mapping.ipynb`  
 → Output: Spectral features → concentration prediction
 
-### 4️⃣ Results & Validation
+### 4. Results & Validation
 
 **Cross-validation**: Compare all three measurement methods  
 → Notebook: `07_concentration_profiles_and_cross_assay.ipynb`
@@ -305,10 +305,10 @@ See `CITATION.cff` for machine-readable citation metadata.
 
 ## Questions & Support
 
-- 🐛 **Bug reports**: Use GitHub Issues with the bug report template
-- 💡 **Feature requests**: Use GitHub Issues with the feature request template
-- 💬 **Questions**: Start a GitHub Discussion
-- 📧 **Private inquiries**: Contact the maintainer
+- **Bug reports**: Use GitHub Issues with the bug report template
+- **Feature requests**: Use GitHub Issues with the feature request template
+- **Questions**: Start a GitHub Discussion
+- **Private inquiries**: Contact the maintainer
 
 ---
 
